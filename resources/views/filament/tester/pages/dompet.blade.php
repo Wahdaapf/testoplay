@@ -1007,7 +1007,7 @@ Page : Dompet.php
                 $misiSelesai = \App\Models\MisiAnggota::where('id_user', $user->id)
                     ->whereHas('misi', fn($q) => $q->where('status', 'selesai'))
                     ->count();
-                $memberSince = $user->created_at->format('M Y');
+                $memberSince = $user->created_at?->format('M Y') ?? '-';
                 $points = $balance?->point ?? 0;
 
                 if ($badgeCount <= 5) {
@@ -1287,7 +1287,8 @@ Page : Dompet.php
                 <div class="mb-4">
                     <h2 class="text-xl font-bold font-heading" style="color:#1e293b;">{{ __('Riwayat Penarikan') }}</h2>
                     <p class="text-sm mt-1" style="color:#64748b;">
-                        {{ __('Menampilkan riwayat transaksi penarikan saldo') }}</p>
+                        {{ __('Menampilkan riwayat transaksi penarikan saldo') }}
+                    </p>
                 </div>
 
                 {{-- Toolbar Control (Search, Filters, Reset) --}}
@@ -1386,7 +1387,8 @@ Page : Dompet.php
                         <span class="material-symbols-outlined text-slate-300"
                             style="font-size: 3rem; margin-bottom: 10px;">search_off</span>
                         <p class="text-slate-500 font-medium text-sm">
-                            {{ __('Tidak ada transaksi yang cocok dengan filter pencarian.') }}</p>
+                            {{ __('Tidak ada transaksi yang cocok dengan filter pencarian.') }}
+                        </p>
                     </div>
 
                 </div>
@@ -1435,13 +1437,15 @@ Page : Dompet.php
                         <div style="padding:24px; flex-grow:1;">
                             <p
                                 style="color:#64748b; font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;">
-                                {{ __('ID Invoice') }} #{{ $invoiceDetail['id'] }}</p>
+                                {{ __('ID Invoice') }} #{{ $invoiceDetail['id'] }}
+                            </p>
 
                             {{-- Nominal Besar --}}
                             <div style="margin-bottom:24px;">
                                 <h2 class="font-heading"
                                     style="font-size:2rem; font-weight:800; color:#0f172a; line-height:1; margin:0;">
-                                    {{ $invoiceDetail['rupiahF'] }}</h2>
+                                    {{ $invoiceDetail['rupiahF'] }}
+                                </h2>
                                 <p class="font-mono-num"
                                     style="color:#ef4444; font-weight:700; margin-top:6px; margin-bottom:0;">
                                     -{{ number_format($invoiceDetail['point']) }} pts</p>
@@ -1450,7 +1454,7 @@ Page : Dompet.php
                             {{-- Status Banner --}}
                             <div
                                 style="margin-bottom:24px; padding:12px 16px; border-radius:12px;
-                             background:{{ $invoiceDetail['status'] === 'success' ? '#dcfce7' : ($invoiceDetail['status'] === 'pending' ? '#fef9c3' : '#fee2e2') }};">
+                                 background:{{ $invoiceDetail['status'] === 'success' ? '#dcfce7' : ($invoiceDetail['status'] === 'pending' ? '#fef9c3' : '#fee2e2') }};">
                                 <div style="display:flex;align-items:center;gap:8px;">
                                     <span class="material-symbols-outlined"
                                         style="font-size:1.3rem;color:{{ $invoiceDetail['status'] === 'success' ? '#16a34a' : ($invoiceDetail['status'] === 'pending' ? '#d97706' : '#dc2626') }};">

@@ -175,7 +175,7 @@
               $misiSelesai = \App\Models\MisiAnggota::where('id_user', $user->id)
                   ->whereHas('misi', fn($q) => $q->where('status', 'selesai'))
                   ->count();
-              $memberSince = $user->created_at->format('M Y');
+              $memberSince = $user->created_at?->format('M Y') ?? '-';
               $points = $balance?->point ?? 0;
 
               if ($badgeCount <= 5) {

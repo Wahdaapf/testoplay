@@ -359,7 +359,7 @@
               @php $r = strtolower($u->role->value ?? $u->role); @endphp
               <span class="badge badge-{{ $r }}">{{ ucfirst($r) }}</span>
             </td>
-            <td>{{ $u->created_at->format('d M Y') }}</td>
+            <td>{{ $u->created_at?->format('d M Y') ?? '-' }}</td>
           </tr>
         @endforeach
       </tbody>
@@ -389,7 +389,7 @@
               <span class="badge badge-{{ $st }}">{{ ucfirst($st) }}</span>
             </td>
             <td>{{ $m->kapasitas ?? '-' }}</td>
-            <td>{{ $m->created_at->format('d M Y') }}</td>
+            <td>{{ $m->created_at?->format('d M Y') ?? '-' }}</td>
           </tr>
         @endforeach
       </tbody>
@@ -426,7 +426,7 @@
             <td>Rp {{ number_format($fee, 0, ',', '.') }}</td>
             <td style="font-weight:600;color:#1e293b;">Rp {{ number_format($total, 0, ',', '.') }}</td>
             <td><span class="badge badge-{{ $st }}">{{ ucfirst($st) }}</span></td>
-            <td>{{ $p->created_at->format('d M Y') }}</td>
+            <td>{{ $p->created_at?->format('d M Y') ?? '-' }}</td>
           </tr>
         @endforeach
       </tbody>
