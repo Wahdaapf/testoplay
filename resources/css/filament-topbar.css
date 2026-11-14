@@ -2543,3 +2543,22 @@
         animation: none !important;
     }
 }
+
+/* ══════════════════════════════════════
+   NAVBAR BRAND LOGO (LIGHT & DARK MODE)
+══════════════════════════════════════ */
+.fi-topbar-brand-logo-light {
+    display: inline-block !important;
+}
+.fi-topbar-brand-logo-dark {
+    display: none !important;
+}
+
+.dark .fi-topbar-brand-logo-light,
+html.dark .fi-topbar-brand-logo-light {
+    display: none !important;
+}
+.dark .fi-topbar-brand-logo-dark,
+html.dark .fi-topbar-brand-logo-dark {
+    display: inline-block !important;
+}
