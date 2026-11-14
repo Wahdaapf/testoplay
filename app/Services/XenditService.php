@@ -39,7 +39,7 @@ class XenditService
                 'account_holder_name' => $data['account_holder_name'],
             ],
             'amount' => (float) $data['amount'],
-            'description' => $data['description'] ?? 'Withdrawal PlayTest ID',
+            'description' => $data['description'] ?? 'Withdrawal PlaytoTest',
             'currency' => 'IDR',
         ]);
 

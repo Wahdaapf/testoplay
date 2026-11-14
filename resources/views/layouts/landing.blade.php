@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@yield('title', 'PlayTest ID – Closed Testing Partner')</title>
+  <title>@yield('title', 'PlaytoTest – Closed Testing Partner')</title>
   <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
 
   <!-- ─── Google Fonts: Inter ─── -->
@@ -148,7 +148,7 @@
 
         <!-- Logo -->
         <a href="/" class="flex items-center select-none animate-fadeUp">
-          <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-12 w-auto object-contain" />
+          <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
         </a>
 
         <!-- Desktop Menu -->
@@ -275,7 +275,7 @@
         <!-- Brand -->
         <div class="md:col-span-2">
           <div class="flex items-center mb-4">
-            <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-12 w-auto object-contain" />
+            <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
           </div>
           <p class="text-sm leading-relaxed max-w-xs">{{ __('Platform kolaborasi untuk Developer dan Tester Indonesia berbasis Project Based Learning untuk memenuhi persyaratan Google Play Closed Testing.') }}</p>
           <div class="flex gap-3 mt-5">
@@ -321,7 +321,7 @@
 
       <!-- Bottom bar -->
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-        <p>© 2026 <span class="text-slate-400 font-semibold">PlayTest ID</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+        <p>© 2026 <span class="text-slate-400 font-semibold">PlaytoTest</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
         <p>{{ __('Dibuat dengan') }} <i class="fa-solid fa-heart text-red-500 mx-1"></i> {{ __('untuk Developer & Tester Indonesia.') }}</p>
       </div>
     </div>

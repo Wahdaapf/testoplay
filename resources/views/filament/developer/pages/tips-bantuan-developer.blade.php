@@ -1071,7 +1071,7 @@
         steps.push({
           popover: {
             title: {!! json_encode(__('👋 Selamat Datang di Panel Developer!')) !!},
-            description: {!! json_encode(__('Tur ini akan memandu Anda mengenal <strong>seluruh fitur developer</strong> PlayTest ID. Mari kita mulai!')) !!},
+            description: {!! json_encode(__('Tur ini akan memandu Anda mengenal <strong>seluruh fitur developer</strong> PlaytoTest. Mari kita mulai!')) !!},
           }
         });
 
@@ -1233,7 +1233,7 @@
         steps.push({
           popover: {
             title: {!! json_encode(__('🎉 Tur Selesai!')) !!},
-            description: {!! json_encode(__('Anda sudah mengenal <strong>seluruh fitur panel developer</strong> PlayTest ID!<br><br>🏠 Dashboard — 📝 Test Case — 📈 Progress<br>👤 Profil — 💡 Tips & Bantuan<br><br>Kembali ke halaman ini kapanpun Anda butuh bantuan.')) !!},
+            description: {!! json_encode(__('Anda sudah mengenal <strong>seluruh fitur panel developer</strong> PlaytoTest!<br><br>🏠 Dashboard — 📝 Test Case — 📈 Progress<br>👤 Profil — 💡 Tips & Bantuan<br><br>Kembali ke halaman ini kapanpun Anda butuh bantuan.')) !!},
           }
         });
 

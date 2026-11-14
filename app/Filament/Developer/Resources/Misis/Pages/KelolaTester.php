@@ -139,7 +139,7 @@ class KelolaTester extends Page
             if ($user && $user->email && $misi) {
                 try {
                     Mail::to($user->email)->send(new ContactMail(
-                        __('Pendaftaran Pengujian Ditolak — PlayTest ID'),
+                        __('Pendaftaran Pengujian Ditolak — PlaytoTest'),
                         __('Pendaftaran Ditolak'),
                         __("Halo :name,\n\nMohon maaf, pendaftaran Anda untuk mengikuti pengujian aplikasi \":aplikasi\" belum diterima oleh developer saat ini.", ['name' => $user->name, 'aplikasi' => $misi->nama_aplikasi]),
                         __('Cari Misi Lain'),
@@ -256,7 +256,7 @@ class KelolaTester extends Page
                         if ($tester->user && $tester->user->email) {
                             try {
                                 Mail::to($tester->user->email)->send(new ContactMail(
-                                    __('Pengujian Aplikasi Dimulai — PlayTest ID'),
+                                    __('Pengujian Aplikasi Dimulai — PlaytoTest'),
                                     __('Misi Pengujian Dimulai!'),
                                     __("Halo :name,\n\nMisi pengujian untuk aplikasi \":aplikasi\" telah resmi dimulai oleh developer.\nSilakan mulai mengunduh aplikasi dan selesaikan tugas harian Anda selama 14 hari kedepan.", ['name' => $tester->user->name, 'aplikasi' => $this->record->nama_aplikasi]),
                                     __('Lihat Misi Saya'),

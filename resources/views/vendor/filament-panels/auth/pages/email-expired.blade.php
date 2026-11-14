@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Expired - PlayTest ID</title>
+    <title>Link Expired - PlaytoTest</title>
     <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -690,7 +690,7 @@
         {{-- ======================================================= --}}
         <div class="verify-mobile-header">
             <div class="verify-mobile-header-logo">
-                <img src="{{ asset('logo.png') }}" alt="PlayTest ID" style="height: 2.5rem; width: auto; object-fit: contain;" />
+                <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 2.5rem; width: auto; object-fit: contain;" />
             </div>
             <p class="verify-mobile-header-tagline">{{ __('Lulus Closed Testing Lebih Cepat') }}</p>
         </div>
@@ -705,7 +705,7 @@
 
             <div class="verify-hero-content">
                 <div class="verify-logo">
-                    <img src="{{ asset('logo.png') }}" alt="PlayTest ID" style="height: 3rem; width: auto; object-fit: contain;" />
+                    <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 3rem; width: auto; object-fit: contain;" />
                 </div>
 
                 <h2 class="verify-hero-title">

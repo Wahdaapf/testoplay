@@ -668,7 +668,7 @@
         {{-- MOBILE HEADER --}}
         <div class="rp-mobile-header">
             <div class="rp-mobile-header-logo">
-                <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-10 w-auto object-contain" />
+                <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto object-contain" />
             </div>
             <p class="rp-mobile-header-tagline">{{ __('Lulus Closed Testing Lebih Cepat') }}</p>
         </div>
@@ -679,7 +679,7 @@
             <div class="rp-hero-bg-overlay"></div>
             <div class="rp-hero-content">
                 <div class="rp-logo">
-                    <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-12 w-auto object-contain" />
+                    <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
                 </div>
                 <div class="rp-hero-extended">
                     <h2 class="rp-hero-title">{{ __('Buat Kata Sandi Baru.') }}</h2>

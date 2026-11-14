@@ -498,7 +498,7 @@ class PantauProgress extends Page
                     if ($user && $user->email) {
                         try {
                             \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\ContactMail(
-                                'Pengujian Aplikasi Gagal — PlayTest ID',
+                                'Pengujian Aplikasi Gagal — PlaytoTest',
                                 'Misi Pengujian Gagal',
                                 "Halo {$user->name},\n\nAnda terdeteksi tidak mengirimkan laporan tugas harian pada hari kemarin untuk pengujian aplikasi \"" . $misi->nama_aplikasi . "\".\nSesuai aturan, Anda dinyatakan gagal menyelesaikan pengujian ini.",
                                 'Lihat Riwayat Misi',
@@ -588,7 +588,7 @@ class PantauProgress extends Page
             if ($user && $user->email) {
                 try {
                     \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\ContactMail(
-                        'Pengujian Aplikasi Selesai — PlayTest ID',
+                        'Pengujian Aplikasi Selesai — PlaytoTest',
                         'Misi Pengujian Selesai!',
                         "Halo {$user->name},\n\nDeveloper telah menyatakan pengujian aplikasi \"" . $misi->nama_aplikasi . "\" selesai.\nPoin dan badge hasil pengujian Anda telah dicairkan ke saldo Anda. Terima kasih atas kontribusi Anda!",
                         'Lihat Dompet Saya',

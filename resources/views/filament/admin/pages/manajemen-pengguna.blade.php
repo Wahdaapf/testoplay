@@ -1,5 +1,5 @@
 {{--
-    Manajemen Pengguna — PlayTest ID Admin Panel
+    Manajemen Pengguna — PlaytoTest Admin Panel
     Page   : ManajemenPengguna.php
     Panel  : Admin (/admin)
     Fonts  : Sora (heading), JetBrains Mono (angka), Inter (body)

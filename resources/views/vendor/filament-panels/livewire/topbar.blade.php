@@ -1,5 +1,5 @@
 {{--
-    PlayTest ID — Enhanced Filament Topbar (v3)
+    PlaytoTest — Enhanced Filament Topbar (v3)
     Adds: animated gradient line, scroll progress bar, brand glow,
           greeting widget, ⌘K hint on global search.
     Keep this file at: resources/views/vendor/filament-panels/components/topbar/index.blade.php
@@ -559,7 +559,7 @@ function tipsBantuanPanel() {
 
     const tipsData = {
         admin: [
-            { title: 'Navigasi Dashboard', emoji: '📊', iconBg: 'rgba(37,99,235,0.12)', category: 'navigasi', categoryLabel: 'Navigasi', desc: 'Dashboard Admin menampilkan ringkasan seluruh platform PlayTest ID. Anda bisa melihat statistik developer, tester, kampanye aktif, dan pendapatan secara real-time.', steps: ['Buka menu "Dashboard" di sidebar', 'Lihat kartu statistik di bagian atas', 'Scroll ke bawah untuk melihat grafik dan tabel'] },
+            { title: 'Navigasi Dashboard', emoji: '📊', iconBg: 'rgba(37,99,235,0.12)', category: 'navigasi', categoryLabel: 'Navigasi', desc: 'Dashboard Admin menampilkan ringkasan seluruh platform PlaytoTest. Anda bisa melihat statistik developer, tester, kampanye aktif, dan pendapatan secara real-time.', steps: ['Buka menu "Dashboard" di sidebar', 'Lihat kartu statistik di bagian atas', 'Scroll ke bawah untuk melihat grafik dan tabel'] },
             { title: 'Kelola Pengguna', emoji: '👥', iconBg: 'rgba(16,185,129,0.12)', category: 'fitur', categoryLabel: 'Fitur', desc: 'Manajemen Pengguna memungkinkan Anda untuk approve, suspend, atau menolak pendaftaran Developer dan Tester.', steps: ['Buka menu "Pengguna" di sidebar', 'Gunakan filter untuk mencari user', 'Klik tombol aksi di setiap baris untuk mengelola'] },
             { title: 'Manajemen Kampanye', emoji: '🚀', iconBg: 'rgba(245,158,11,0.12)', category: 'fitur', categoryLabel: 'Fitur', desc: 'Kelola semua kampanye testing yang ada di platform. Anda bisa memantau progres dan status setiap kampanye.', steps: ['Buka menu "Kampanye" di sidebar', 'Lihat daftar kampanye yang aktif', 'Klik detail untuk melihat informasi lengkap'] },
             { title: 'Verifikasi Pembayaran', emoji: '💳', iconBg: 'rgba(139,92,246,0.12)', category: 'fitur', categoryLabel: 'Fitur', desc: 'Review dan verifikasi bukti pembayaran dari Developer. Anda bisa menyetujui atau menolak pembayaran.', steps: ['Buka menu "Pembayaran Developer"', 'Lihat daftar pembayaran pending', 'Klik detail untuk melihat bukti transfer', 'Approve atau tolak pembayaran'] },

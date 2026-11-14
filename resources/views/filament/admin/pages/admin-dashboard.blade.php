@@ -1,5 +1,5 @@
 {{--
-    Admin Dashboard — PlayTest ID  
+    Admin Dashboard — PlaytoTest  
     Panel  : Admin (path /admin)  
     Page   : AdminDashboard.php  
     Fonts  : Sora (heading), JetBrains Mono (angka), Inter (body)  
@@ -373,7 +373,7 @@
             <div class="w-full sm:w-auto">
 
                 <p class="text-sm mt-0.5" style="color:#64748b;">
-                    {{ __('Ringkasan platform PlayTest ID — data diperbarui') }} {{ now()->diffForHumans() }}
+                    {{ __('Ringkasan platform PlaytoTest — data diperbarui') }} {{ now()->diffForHumans() }}
                 </p>
             </div>
             <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full sm:w-auto">

@@ -1,5 +1,5 @@
 {{--  
-    Tester Dashboard — PlayTest ID  
+    Tester Dashboard — PlaytoTest  
     Panel  : Tester (path /tester)  
     Page   : TesterDashboard.php  
     Fonts  : Plus Jakarta Sans (heading), JetBrains Mono (angka), Inter (body)  

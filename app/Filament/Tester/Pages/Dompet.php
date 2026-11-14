@@ -291,7 +291,7 @@ class Dompet extends Page
                 'account_number' => trim($this->nomorAkun),
                 'account_holder_name' => $user->name,
                 'amount' => $rupiah,
-                'description' => 'Penarikan Saldo PlayTest ID - ' . $user->name,
+                'description' => 'Penarikan Saldo PlaytoTest - ' . $user->name,
             ]);
 
             // Update database dengan response dari Xendit

@@ -5,7 +5,7 @@
         </svg>
     </div>
     <div class="flex flex-col">
-        <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-none">PlayTest ID</span>
+        <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white leading-none">PlaytoTest</span>
         <span class="text-[10px] font-medium text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider">Developer Dashboard</span>
     </div>
 </div>

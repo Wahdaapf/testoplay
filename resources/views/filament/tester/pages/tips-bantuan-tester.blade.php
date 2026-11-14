@@ -1589,7 +1589,7 @@
             steps.push({
               popover: {
                title: `{!! __('👋 Selamat Datang di Panel Tester!') !!}`,
-description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur pengetesan</strong> PlayTest ID. Mari kita mulai!') !!}`,
+description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur pengetesan</strong> PlaytoTest. Mari kita mulai!') !!}`,
               }
             });
 
@@ -1749,7 +1749,7 @@ description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur p
             steps.push({
               popover: {
                 title: '{{ __('🎉 Tur Selesai!') }}',
-                description: '{{ __('Anda siap menjelajahi seluruh fitur platform sebagai Tester hebat di PlayTest ID!<br><br>🏠 Dashboard — 🎯 Misi Saya — 💰 Dompet — 👤 Profil<br><br>Gunakan halaman ini kapan pun Anda membutuhkan panduan.') }}',
+                description: '{{ __('Anda siap menjelajahi seluruh fitur platform sebagai Tester hebat di PlaytoTest!<br><br>🏠 Dashboard — 🎯 Misi Saya — 💰 Dompet — 👤 Profil<br><br>Gunakan halaman ini kapan pun Anda membutuhkan panduan.') }}',
               }
             });
 

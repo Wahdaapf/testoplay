@@ -158,7 +158,7 @@ class MisisTable
                             if ($tester->user && $tester->user->email) {
                                 try {
                                     \Illuminate\Support\Facades\Mail::to($tester->user->email)->send(new \App\Mail\ContactMail(
-                                        'Pengujian Aplikasi Dimulai — PlayTest ID',
+                                        'Pengujian Aplikasi Dimulai — PlaytoTest',
                                         'Misi Pengujian Dimulai!',
                                         "Halo {$tester->user->name},\n\nMisi pengujian untuk aplikasi \"{$record->nama_aplikasi}\" telah resmi dimulai oleh developer.\nSilakan mulai mengunduh aplikasi dan selesaikan tugas harian Anda selama 14 hari ke depan.",
                                         'Lihat Misi Saya',

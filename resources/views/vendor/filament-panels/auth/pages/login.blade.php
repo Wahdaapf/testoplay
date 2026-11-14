@@ -914,7 +914,7 @@
         {{-- ======================================================= --}}
         <div class="login-mobile-header">
             <div class="login-mobile-header-logo">
-                <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-10 w-auto object-contain" />
+                <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto object-contain" />
             </div>
             <p class="login-mobile-header-tagline">{{ __('Lulus Closed Testing Lebih Cepat') }}</p>
         </div>
@@ -930,7 +930,7 @@
             <div class="login-hero-content">
                 {{-- Logo --}}
                 <div class="login-logo">
-                    <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-12 w-auto object-contain" />
+                    <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
                 </div>
 
                 {{-- Desktop-only extended hero --}}
@@ -978,7 +978,7 @@
                     <div style="display:none !important;"
                         class="lg-hidden-logo">
                         <span class="material-symbols-outlined" style="font-size:1.75rem;">science</span>
-                        <span style="font-size:1.25rem; font-weight:800; color:#111827; letter-spacing:-0.02em;">PlayTest ID</span>
+                        <span style="font-size:1.25rem; font-weight:800; color:#111827; letter-spacing:-0.02em;">PlaytoTest</span>
                     </div>
 
                     {{-- Card header --}}

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQ – {{ __('Pertanyaan Umum') }} – PlayTest ID</title>
+  <title>FAQ – {{ __('Pertanyaan Umum') }} – PlaytoTest</title>
   <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
-  <meta name="description" content="{{ __('Temukan jawaban atas pertanyaan umum seputar PlayTest ID, cara kerja platform, pembayaran, dan misi testing.') }}">
+  <meta name="description" content="{{ __('Temukan jawaban atas pertanyaan umum seputar PlaytoTest, cara kerja platform, pembayaran, dan misi testing.') }}">
   <script>
     (function() {
       var t = localStorage.getItem('pt-theme');
@@ -188,7 +188,7 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-slate-900/95 border-b border-slate-100 dark:border-slate-800 backdrop-blur-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="{{ url('/') }}" class="flex items-center">
-        <img src="{{ asset('logo.png') }}" alt="PlayTest ID" class="h-10 w-auto"/>
+        <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto"/>
       </a>
       <div class="flex items-center gap-3">
         <a href="{{ url('/') }}" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition flex items-center gap-1.5">
@@ -273,8 +273,8 @@
       </div>
       <div class="page-card card-accent-blue">
         @php $faqs_umum = [
-          [__('Apa itu PlayTest ID?'), __('PlayTest ID adalah platform kolaborasi yang menghubungkan developer aplikasi Android dengan tester berkualitas di Indonesia. Platform ini membantu developer memenuhi persyaratan Google Play Closed Testing dengan lebih mudah dan efisien.')],
-          [__('Apakah PlayTest ID gratis?'), __('PlayTest ID menawarkan berbagai paket, mulai dari paket gratis dengan fitur terbatas hingga paket premium untuk kebutuhan testing yang lebih besar. Lihat halaman Harga untuk detail lengkap.')],
+          [__('Apa itu PlaytoTest?'), __('PlaytoTest adalah platform kolaborasi yang menghubungkan developer aplikasi Android dengan tester berkualitas di Indonesia. Platform ini membantu developer memenuhi persyaratan Google Play Closed Testing dengan lebih mudah dan efisien.')],
+          [__('Apakah PlaytoTest gratis?'), __('PlaytoTest menawarkan berbagai paket, mulai dari paket gratis dengan fitur terbatas hingga paket premium untuk kebutuhan testing yang lebih besar. Lihat halaman Harga untuk detail lengkap.')],
           [__('Bagaimana cara mendaftar?'), __('Klik tombol "Daftar" di pojok kanan atas, pilih peran Anda (Developer atau Tester), isi formulir pendaftaran, dan verifikasi email Anda. Proses ini hanya membutuhkan beberapa menit.')],
         ]; @endphp
         @foreach($faqs_umum as $i => $faq)
@@ -365,7 +365,7 @@
 
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-500 text-center py-6 px-4 text-xs mt-4">
-    <p>© 2026 <span class="text-slate-300 font-semibold">PlayTest ID</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+    <p>© 2026 <span class="text-slate-300 font-semibold">PlaytoTest</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
     <div class="flex flex-wrap justify-center gap-4 mt-2">
       <a href="{{ route('kebijakan-privasi') }}" class="hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
       <a href="{{ route('syarat-ketentuan') }}" class="hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>

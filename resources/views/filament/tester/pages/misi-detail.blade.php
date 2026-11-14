@@ -1,5 +1,5 @@
 {{--
-Misi Detail — PlayTest ID
+Misi Detail — PlaytoTest
 Panel : Tester (/tester)
 Page : MisiDetail.php
 Fonts : Plus Jakarta Sans (heading), JetBrains Mono (angka), Inter (body)

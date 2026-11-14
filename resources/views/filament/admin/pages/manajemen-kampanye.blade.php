@@ -1,5 +1,5 @@
 {{--
-    Manajemen Kampanye — PlayTest ID Admin Panel
+    Manajemen Kampanye — PlaytoTest Admin Panel
     Page   : ManajemenKampanye.php
     Panel  : Admin (/admin)
     Fonts  : Sora (heading), JetBrains Mono (angka), Inter (body)

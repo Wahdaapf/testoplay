@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify Your Email - PlayTest ID</title>
+    <title>Verify Your Email - PlaytoTest</title>
     <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -755,7 +755,7 @@
         {{-- MOBILE HEADER --}}
         <div class="verify-mobile-header">
             <div class="verify-mobile-header-logo">
-                <img src="{{ asset('logo.png') }}" alt="PlayTest ID" style="height: 2.5rem; width: auto; object-fit: contain;" />
+                <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 2.5rem; width: auto; object-fit: contain;" />
             </div>
             <p class="verify-mobile-header-tagline">{{ __('Lulus Closed Testing Lebih Cepat') }}</p>
         </div>
@@ -769,7 +769,7 @@
 
                 {{-- TOP: Logo --}}
                 <div class="verify-logo">
-                    <img src="{{ asset('logo.png') }}" alt="PlayTest ID" style="height: 3rem; width: auto; object-fit: contain;" />
+                    <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 3rem; width: auto; object-fit: contain;" />
                 </div>
 
                 {{-- Desktop-only extended hero --}}
@@ -840,7 +840,7 @@
                         <div class="verify-step">
                             <div class="verify-step-num">1</div>
                             <p class="verify-step-text">
-                                {!! __('<strong>Buka email Anda</strong> — cari pesan dari <strong>PlayTest ID</strong>') !!}
+                                {!! __('<strong>Buka email Anda</strong> — cari pesan dari <strong>PlaytoTest</strong>') !!}
                             </p>
                         </div>
                         <div class="verify-step">

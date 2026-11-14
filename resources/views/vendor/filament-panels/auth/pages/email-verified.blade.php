@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Verified — PlayTest ID</title>
+    <title>Email Verified — PlaytoTest</title>
     <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -528,7 +528,7 @@
 
         <!-- Brand -->
         <div class="brand">
-            <img src="{{ asset('logo.png') }}" alt="PlayTest ID" style="height: 2.5rem; width: auto; object-fit: contain;" />
+            <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 2.5rem; width: auto; object-fit: contain;" />
         </div>
 
         <!-- Success badge -->
@@ -548,7 +548,7 @@
         </div>
         <h1>{{ __('Email Diverifikasi!') }}</h1>
         <p class="subtitle">
-            {!! __('Akun PlayTest ID Anda sekarang sepenuhnya aktif.<br>Anda siap untuk mulai menguji aplikasi dan mendapatkan hadiah!') !!}
+            {!! __('Akun PlaytoTest Anda sekarang sepenuhnya aktif.<br>Anda siap untuk mulai menguji aplikasi dan mendapatkan hadiah!') !!}
         </p>
 
         <!-- Perks -->
@@ -600,7 +600,7 @@
 
     <!-- Footer (Sekarang dijamin persis di tengah bawah) -->
     <div class="footer">
-        <p>{!! __('&copy; :year PlayTest ID. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}</p>
+        <p>{!! __('&copy; :year PlaytoTest. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}</p>
         <div class="footer-links">
             <a href="{{ config('app.url') }}">{{ __('Beranda') }}</a>
             <a href="{{ config('app.url') }}/privacy">{{ __('Privasi') }}</a>

@@ -1,5 +1,5 @@
 {{-- ============================================================ --}}
-{{-- System Notification Email — PlayTest ID Brand              --}}
+{{-- System Notification Email — PlaytoTest Brand              --}}
 {{-- Gmail-safe: table layout, inline styles, no SVG, no flex  --}}
 {{-- ============================================================ --}}
 <!DOCTYPE html>
@@ -48,7 +48,7 @@
 
     {{-- Preheader (hidden preview text) --}}
     <div style="display:none; font-size:1px; color:#eef0f7; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
-        {{ $title }} — {{ __('Pemberitahuan dari PlayTest ID.') }}
+        {{ $title }} — {{ __('Pemberitahuan dari PlaytoTest.') }}
     </div>
 
     <!-- Outer wrapper -->
@@ -62,7 +62,7 @@
                     {{-- ---- Brand header ---- --}}
                     <tr>
                         <td style="text-align:center; padding-bottom:24px;">
-                            <img src="{{ isset($message) ? $message->embed(public_path('logo.png')) : asset('logo.png') }}" alt="PlayTest ID" height="42" style="display:inline-block; height:42px; width:auto; border:0;" />
+                            <img src="{{ isset($message) ? $message->embed(public_path('logo.png')) : asset('logo.png') }}" alt="PlaytoTest" height="42" style="display:inline-block; height:42px; width:auto; border:0;" />
                         </td>
                     </tr>
 
@@ -100,7 +100,7 @@
                                         </h1>
 
                                         <p style="margin:0; font-size:15px; color:#4b5563; line-height:1.75; font-weight:500;">
-                                            {!! __('Notifikasi dari platform <strong style="color:#1e1b4b;">PlayTest ID</strong>.') !!}
+                                            {!! __('Notifikasi dari platform <strong style="color:#1e1b4b;">PlaytoTest</strong>.') !!}
                                         </p>
                                     </td>
                                 </tr>
@@ -178,10 +178,10 @@
                     <tr>
                         <td style="text-align:center; padding:28px 16px 0;">
                             <p style="margin:0 0 10px; font-size:13px; font-weight:700; color:#6b7280; letter-spacing:0.4px;">
-                                PlayTest ID
+                                PlaytoTest
                             </p>
                             <p style="margin:0; font-size:12px; color:#9ca3af; line-height:1.7; font-weight:500;">
-                                {!! __('Anda menerima email ini karena akun Anda terdaftar<br>di platform PlayTest ID.') !!}
+                                {!! __('Anda menerima email ini karena akun Anda terdaftar<br>di platform PlaytoTest.') !!}
                             </p>
                             <p style="margin:14px 0 0; font-size:12px;">
                                 <a href="{{ config('app.url') }}" style="color:#6b7280; text-decoration:none; margin:0 10px; font-weight:600;">{{ __('Beranda') }}</a>
@@ -191,7 +191,7 @@
                                 <a href="{{ config('app.url') }}/terms" style="color:#6b7280; text-decoration:none; margin:0 10px; font-weight:600;">{{ __('Syarat') }}</a>
                             </p>
                             <p style="margin:14px 0 0; font-size:11px; color:#9ca3af;">
-                                {!! __('&copy; :year PlayTest ID. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}
+                                {!! __('&copy; :year PlaytoTest. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}
                             </p>
                         </td>
                     </tr>

@@ -1,5 +1,5 @@
 {{-- ============================================================ --}}
-{{-- Custom Email Verification Email — PlayTest ID Brand (v2)   --}}
+{{-- Custom Email Verification Email — PlaytoTest Brand (v2)   --}}
 {{-- Gmail-safe: table layout, inline styles, no SVG, no flex   --}}
 {{-- Used in: App\Notifications\VerifyEmailNotification         --}}
 {{-- ============================================================ --}}
@@ -13,7 +13,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta name="color-scheme" content="light only">
     <meta name="supported-color-schemes" content="light only">
-    <title>{{ __('Verifikasi Email Anda — PlayTest ID') }}</title>
+    <title>{{ __('Verifikasi Email Anda — PlaytoTest') }}</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -51,7 +51,7 @@
 
     {{-- Preheader --}}
     <div style="display:none; font-size:1px; color:#eef0f7; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
-        {{ __('Selamat datang di PlayTest ID! Verifikasi email Anda untuk mengaktifkan akun dan mulai menghasilkan.') }}
+        {{ __('Selamat datang di PlaytoTest! Verifikasi email Anda untuk mengaktifkan akun dan mulai menghasilkan.') }}
     </div>
 
     <!-- Outer wrapper -->
@@ -65,7 +65,7 @@
                     {{-- ──────────── Brand Header ──────────── --}}
                     <tr>
                         <td style="text-align:center; padding-bottom:24px;">
-                            <img src="{{ isset($message) ? $message->embed(public_path('logo.png')) : asset('logo.png') }}" alt="PlayTest ID" height="42" style="display:inline-block; height:42px; width:auto; border:0;" />
+                            <img src="{{ isset($message) ? $message->embed(public_path('logo.png')) : asset('logo.png') }}" alt="PlaytoTest" height="42" style="display:inline-block; height:42px; width:auto; border:0;" />
                         </td>
                     </tr>
 
@@ -112,7 +112,7 @@
                                         @endif
 
                                         <p style="margin:0; font-size:15px; color:#4b5563; line-height:1.75; font-weight:500;">
-                                            {!! __('Anda hampir selesai! Konfirmasi email Anda untuk mengaktifkan<br>akun <strong style="color:#4F46E5;">PlayTest ID</strong> Anda dan mulai menghasilkan dengan menguji aplikasi.') !!}
+                                            {!! __('Anda hampir selesai! Konfirmasi email Anda untuk mengaktifkan<br>akun <strong style="color:#4F46E5;">PlaytoTest</strong> Anda dan mulai menghasilkan dengan menguji aplikasi.') !!}
                                         </p>
                                     </td>
                                 </tr>
@@ -280,7 +280,7 @@
                     <tr>
                         <td style="text-align:center; padding:28px 16px 0;">
                             <p style="margin:0 0 10px; font-size:13px; font-weight:700; color:#6b7280; letter-spacing:0.4px;">
-                                PlayTest ID
+                                PlaytoTest
                             </p>
                             <p style="margin:0; font-size:12px; color:#9ca3af; line-height:1.7; font-weight:500;">
                                 {!! __('Anda menerima email ini karena akun dibuat<br>dengan alamat email ini.') !!}
@@ -293,7 +293,7 @@
                                 <a href="{{ config('app.url') }}/terms" style="color:#6b7280; text-decoration:none; margin:0 10px; font-weight:600;">{{ __('Syarat') }}</a>
                             </p>
                             <p style="margin:14px 0 0; font-size:11px; color:#9ca3af;">
-                                {!! __('&copy; :year PlayTest ID. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}
+                                {!! __('&copy; :year PlaytoTest. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}
                             </p>
                         </td>
                     </tr>

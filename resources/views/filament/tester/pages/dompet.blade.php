@@ -1,5 +1,5 @@
 {{--
-    Dompet / Wallet — PlayTest ID
+    Dompet / Wallet — PlaytoTest
     Panel  : Tester (path /tester)
     Page   : Dompet.php
 --}}

@@ -923,7 +923,7 @@
           iconBg: 'rgba(37,99,235,0.12)',
           category: 'navigasi',
           categoryLabel: {!! json_encode(__('Navigasi')) !!},
-          desc: {!! json_encode(__('Dashboard Admin menampilkan ringkasan seluruh platform PlayTest ID. Anda bisa melihat statistik developer, tester, kampanye aktif, dan pendapatan secara real-time. Dashboard dilengkapi chart aktivitas mingguan dan daftar pendaftaran terbaru.')) !!},
+          desc: {!! json_encode(__('Dashboard Admin menampilkan ringkasan seluruh platform PlaytoTest. Anda bisa melihat statistik developer, tester, kampanye aktif, dan pendapatan secara real-time. Dashboard dilengkapi chart aktivitas mingguan dan daftar pendaftaran terbaru.')) !!},
           steps: [{!! json_encode(__('Buka menu "Dashboard" di sidebar kiri')) !!}, {!! json_encode(__('Lihat 6 kartu statistik utama di bagian atas (Developer, Tester, Kampanye Aktif, Selesai, Pendapatan, Pending)')) !!}, {!! json_encode(__('Scroll ke bawah untuk melihat chart aktivitas mingguan dan tabel pendaftaran terbaru')) !!}, {!! json_encode(__('Gunakan tombol "Refresh Data" untuk memperbarui data secara manual')) !!}]
         },
         {
@@ -1149,7 +1149,7 @@
         steps.push({
           popover: {
             title: {!! json_encode(__('👋 Selamat Datang di Panel Admin!')) !!},
-            description: {!! json_encode(__('Tur ini akan memandu Anda mengenal <strong>seluruh fitur admin</strong> PlayTest ID. Mari kita mulai!')) !!},
+            description: {!! json_encode(__('Tur ini akan memandu Anda mengenal <strong>seluruh fitur admin</strong> PlaytoTest. Mari kita mulai!')) !!},
           }
         });
 
@@ -1354,7 +1354,7 @@
         steps.push({
           popover: {
             title: {!! json_encode(__('🎉 Tur Selesai!')) !!},
-            description: {!! json_encode(__('Anda sudah mengenal <strong>seluruh fitur panel admin</strong> PlayTest ID!<br><br>📊 Dashboard — 👥 Pengguna — 🚀 Kampanye<br>💳 Pembayaran — 🏦 Withdraw — 📦 Paket<br><br>Kembali ke halaman ini kapanpun Anda butuh bantuan.')) !!},
+            description: {!! json_encode(__('Anda sudah mengenal <strong>seluruh fitur panel admin</strong> PlaytoTest!<br><br>📊 Dashboard — 👥 Pengguna — 🚀 Kampanye<br>💳 Pembayaran — 🏦 Withdraw — 📦 Paket<br><br>Kembali ke halaman ini kapanpun Anda butuh bantuan.')) !!},
           }
         });
 

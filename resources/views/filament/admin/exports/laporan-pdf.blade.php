@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laporan Dashboard — PlayTest ID</title>
+<title>Laporan Dashboard — PlaytoTest</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -83,7 +83,7 @@
 
 {{-- ── Print Bar ── --}}
 <div class="print-bar">
-  <span class="print-bar-title">📄 Laporan Dashboard — PlayTest ID</span>
+  <span class="print-bar-title">📄 Laporan Dashboard — PlaytoTest</span>
   <button class="no-print" onclick="window.print()">
     <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
       <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/>
@@ -103,7 +103,7 @@
     <div class="report-meta">
       <p style="font-size:15px;font-weight:700;color:#1e293b;">Laporan Ringkasan Dashboard</p>
       <p>Dibuat: {{ now()->format('d F Y, H:i') }} WIB</p>
-      <p>Oleh: Admin PlayTest ID</p>
+      <p>Oleh: Admin PlaytoTest</p>
     </div>
   </div>
 
@@ -239,7 +239,7 @@
 
   {{-- ── Footer ── --}}
   <div class="footer">
-    Laporan ini dibuat secara otomatis oleh sistem PlayTest ID pada {{ now()->format('d F Y \p\u\k\u\l H:i') }} WIB.
+    Laporan ini dibuat secara otomatis oleh sistem PlaytoTest pada {{ now()->format('d F Y \p\u\k\u\l H:i') }} WIB.
     Bersifat rahasia dan hanya untuk penggunaan internal admin.
   </div>
 </div>
