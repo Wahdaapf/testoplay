@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Expired - PlaytoTest</title>
-    <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+    <title>Link Expired - Testoplay</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=manrope:400,500,600,700,800,900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
 
     <style>
         *,
@@ -678,25 +680,29 @@
 
     <div class="verify-page" id="verify-page">
         <x-auth-mobile-bg />
-        
+
         {{-- Language Switcher (Fixed top right) --}}
-        <div style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 50; display: flex; gap: 0.375rem; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); padding: 0.25rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
-            <a href="{{ route('language.switch', 'en') }}" style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'en' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'en' ? '#4F46E5' : 'transparent' }};">EN</a>
-            <a href="{{ route('language.switch', 'id') }}" style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'id' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'id' ? '#4F46E5' : 'transparent' }};">ID</a>
+        <div
+            style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 50; display: flex; gap: 0.375rem; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); padding: 0.25rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+            <a href="{{ route('language.switch', 'en') }}"
+                style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'en' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'en' ? '#4F46E5' : 'transparent' }};">EN</a>
+            <a href="{{ route('language.switch', 'id') }}"
+                style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'id' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'id' ? '#4F46E5' : 'transparent' }};">ID</a>
         </div>
 
         {{-- ======================================================= --}}
-        {{-- MOBILE HEADER                                            --}}
+        {{-- MOBILE HEADER --}}
         {{-- ======================================================= --}}
         <div class="verify-mobile-header">
             <div class="verify-mobile-header-logo">
-                <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 2.5rem; width: auto; object-fit: contain;" />
+                <img src="{{ asset('logo.png') }}" alt="Testoplay"
+                    style="height: 2.5rem; width: auto; object-fit: contain;" />
             </div>
             <p class="verify-mobile-header-tagline">{{ __('Lulus Closed Testing Lebih Cepat') }}</p>
         </div>
 
         {{-- ======================================================= --}}
-        {{-- LEFT HERO PANEL (desktop only)                           --}}
+        {{-- LEFT HERO PANEL (desktop only) --}}
         {{-- ======================================================= --}}
         <div class="verify-hero">
             {{-- Background image + overlay --}}
@@ -705,7 +711,8 @@
 
             <div class="verify-hero-content">
                 <div class="verify-logo">
-                    <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 3rem; width: auto; object-fit: contain;" />
+                    <img src="{{ asset('logo.png') }}" alt="Testoplay"
+                        style="height: 3rem; width: auto; object-fit: contain;" />
                 </div>
 
                 <h2 class="verify-hero-title">
@@ -717,7 +724,7 @@
 
                 <div class="verify-hero-pills">
                     @foreach([__('✓ 20+ Tester Asli'), __('✓ Ulasan Asli'), __('✓ 14 Hari Pengujian'), __('✓ Google Play Console'), __('✓ Akses Instan')] as $feature)
-                    <span class="verify-hero-pill">{!! $feature !!}</span>
+                        <span class="verify-hero-pill">{!! $feature !!}</span>
                     @endforeach
                 </div>
 
@@ -725,22 +732,24 @@
                 <div class="verify-hero-footer">
                     <div class="verify-avatars">
                         @php
-                        $avatarColors = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b'];
-                        $avatarInitials = ['JD', 'AK', 'MR', 'ST'];
+                            $avatarColors = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b'];
+                            $avatarInitials = ['JD', 'AK', 'MR', 'ST'];
                         @endphp
                         @foreach($avatarInitials as $i => $initials)
-                        <div class="verify-avatar-initials" style="background:{{ $avatarColors[$i] }}">{{ $initials }}</div>
+                            <div class="verify-avatar-initials" style="background:{{ $avatarColors[$i] }}">{{ $initials }}
+                            </div>
                         @endforeach
                     </div>
                     <p class="verify-social-proof">
-                        {{ __('Dipercaya oleh') }} <strong style="color:#111827; font-weight:700;">{{ __('500+ Developer') }}</strong>
+                        {{ __('Dipercaya oleh') }} <strong
+                            style="color:#111827; font-weight:700;">{{ __('500+ Developer') }}</strong>
                     </p>
                 </div>
             </div>
         </div>
 
         {{-- ======================================================= --}}
-        {{-- RIGHT PANEL — CARD                                       --}}
+        {{-- RIGHT PANEL — CARD --}}
         {{-- ======================================================= --}}
         <div class="verify-card-section">
             <div class="verify-card">
@@ -804,7 +813,7 @@
             {{-- Mobile-only feature pills --}}
             <div class="verify-mobile-features">
                 @foreach([__('✓ 20+ Tester'), __('✓ Uji 14 Hari'), __('✓ Akses Instan')] as $feature)
-                <span class="verify-mobile-pill">{!! $feature !!}</span>
+                    <span class="verify-mobile-pill">{!! $feature !!}</span>
                 @endforeach
             </div>
         </div>

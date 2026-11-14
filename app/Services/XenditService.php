@@ -30,18 +30,18 @@ class XenditService
             'Idempotency-key' => $idempotencyKey,
             'Content-Type' => 'application/json',
         ])
-        ->withBasicAuth($this->secretKey, '')
-        ->post("{$this->baseUrl}/v2/payouts", [
-            'reference_id' => $data['reference_id'],
-            'channel_code' => $data['channel_code'],
-            'channel_properties' => [
-                'account_number' => $data['account_number'],
-                'account_holder_name' => $data['account_holder_name'],
-            ],
-            'amount' => (float) $data['amount'],
-            'description' => $data['description'] ?? 'Withdrawal PlaytoTest',
-            'currency' => 'IDR',
-        ]);
+            ->withBasicAuth($this->secretKey, '')
+            ->post("{$this->baseUrl}/v2/payouts", [
+                'reference_id' => $data['reference_id'],
+                'channel_code' => $data['channel_code'],
+                'channel_properties' => [
+                    'account_number' => $data['account_number'],
+                    'account_holder_name' => $data['account_holder_name'],
+                ],
+                'amount' => (float) $data['amount'],
+                'description' => $data['description'] ?? 'Withdrawal Testoplay',
+                'currency' => 'IDR',
+            ]);
 
         if ($response->failed()) {
             Log::error('Xendit Payout Creation Failed', [

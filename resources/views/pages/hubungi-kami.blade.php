@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ __('Hubungi Kami') }} – PlaytoTest</title>
-  <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+  <title>{{ __('Hubungi Kami') }} – Testoplay</title>
+  <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
   <meta name="description"
-    content="{{ __('Hubungi tim PlaytoTest untuk pertanyaan, laporan masalah, atau saran. Kami siap membantu Anda.') }}">
+    content="{{ __('Hubungi tim Testoplay untuk pertanyaan, laporan masalah, atau saran. Kami siap membantu Anda.') }}">
   <script>
     (function () {
       var t = localStorage.getItem('pt-theme');
@@ -456,7 +456,8 @@
     class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-slate-900/95 border-b border-slate-100 dark:border-slate-800 backdrop-blur-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="{{ url('/') }}" class="flex items-center">
-        <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto" />
+        <img src="{{ asset('logo.png') }}" alt="Testoplay" class="h-10 w-auto dark:hidden" />
+        <img src="{{ asset('logo-dark.png') }}" alt="Testoplay" class="h-10 w-auto hidden dark:block" />
       </a>
       <div class="flex items-center gap-3">
         <a href="{{ url('/') }}"
@@ -542,14 +543,14 @@
       <!-- Contact Info (left) -->
       <div class="space-y-3">
         <!-- Email -->
-        <a href="mailto:support@playtotest.com" class="contact-card flex items-start gap-3 block no-underline">
+        <a href="mailto:support@testoplay.com" class="contact-card flex items-start gap-3 block no-underline">
           <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#eff6ff;">
             <i class="fa-solid fa-envelope text-brand-600 text-sm"></i>
           </div>
           <div class="min-w-0">
             <p class="text-xs font-bold text-slate-700 dark:text-slate-200">{{ __('Email') }}</p>
             <p class="text-[11px] text-slate-400 dark:text-slate-500">{{ __('Respons dalam 24 jam kerja') }}</p>
-            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium mt-0.5 truncate">support@playtotest.com</p>
+            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium mt-0.5 truncate">support@testoplay.com</p>
           </div>
         </a>
         <!-- WhatsApp -->
@@ -595,7 +596,8 @@
           <div class="mb-5">
             <h2 class="text-base font-bold text-slate-800 dark:text-slate-100">{{ __('Kirim Pesan') }}</h2>
             <p class="text-slate-400 dark:text-slate-500 text-xs mt-0.5">
-              {{ __('Isi formulir di bawah dan kami akan merespons sesegera mungkin.') }}</p>
+              {{ __('Isi formulir di bawah dan kami akan merespons sesegera mungkin.') }}
+            </p>
           </div>
 
           <!-- Success -->
@@ -657,14 +659,19 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-500 text-center py-6 px-4 text-xs mt-4">
-    <p>© 2026 <span class="text-slate-300 font-semibold">PlaytoTest</span>.
-      {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+  <footer
+    class="bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 text-center py-6 px-4 text-xs mt-4 transition-colors duration-200">
+    <p>© 2026 <span class="text-slate-700 dark:text-slate-300 font-semibold">Testoplay</span>.
+      {{ __('Hak cipta dilindungi undang-undang.') }}
+    </p>
     <div class="flex flex-wrap justify-center gap-4 mt-2">
-      <a href="{{ route('kebijakan-privasi') }}" class="hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
-      <a href="{{ route('syarat-ketentuan') }}" class="hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
-      <a href="{{ route('faq') }}" class="hover:text-white transition">FAQ</a>
-      <a href="{{ route('hubungi-kami') }}" class="hover:text-white transition">{{ __('Hubungi Kami') }}</a>
+      <a href="{{ route('kebijakan-privasi') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
+      <a href="{{ route('syarat-ketentuan') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
+      <a href="{{ route('faq') }}" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
+      <a href="{{ route('hubungi-kami') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Hubungi Kami') }}</a>
     </div>
   </footer>
 

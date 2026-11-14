@@ -253,11 +253,11 @@ class MisiSaya extends Page implements HasForms
 
         // Update record
         $currentSub->update([
-            'image'          => $path,
-            'desc'           => 'Daily Task Submission',
+            'image' => $path,
+            'desc' => 'Daily Task Submission',
             'catatan_tester' => $data['catatan_tester'] ?? null,
-            'alasan_tolak'   => null,
-            'status'         => 'pending',
+            'alasan_tolak' => null,
+            'status' => 'pending',
         ]);
 
         Notification::make()
@@ -337,7 +337,7 @@ class MisiSaya extends Page implements HasForms
                     if ($user && $user->email) {
                         try {
                             \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\ContactMail(
-                                'Pengujian Aplikasi Gagal — PlaytoTest',
+                                'Pengujian Aplikasi Gagal — Testoplay',
                                 'Misi Pengujian Gagal',
                                 "Halo {$user->name},\n\nAnda terdeteksi tidak mengirimkan laporan tugas harian pada hari kemarin untuk pengujian aplikasi \"" . $misi->nama_aplikasi . "\".\nSesuai aturan, Anda dinyatakan gagal menyelesaikan pengujian ini.",
                                 'Lihat Riwayat Misi',

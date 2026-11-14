@@ -20,7 +20,7 @@ class VerifyEmailMail extends Mailable
      */
     public function __construct(string $url, string $userName = '')
     {
-        $this->url      = $url;
+        $this->url = $url;
         $this->userName = $userName;
     }
 
@@ -30,7 +30,7 @@ class VerifyEmailMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: __('Verifikasi Email Anda — PlaytoTest'),
+            subject: __('Verifikasi Email Anda — Testoplay'),
         );
     }
 
@@ -42,7 +42,7 @@ class VerifyEmailMail extends Mailable
         return new Content(
             view: 'vendor.filament-panels.emails.auth.verify-email',
             with: [
-                'url'      => $this->url,
+                'url' => $this->url,
                 'userName' => $this->userName,
             ],
         );

@@ -61,7 +61,7 @@ class AdminPanelProvider extends PanelProvider
                 'warning' => Color::Amber,
             ])
 
-            ->favicon('/logoheader.png')
+            ->favicon('/favicon.ico')
 
             // ── Sidebar Navigation ────────────────────────────  
             ->navigation(function (NavigationBuilder $builder): NavigationBuilder {

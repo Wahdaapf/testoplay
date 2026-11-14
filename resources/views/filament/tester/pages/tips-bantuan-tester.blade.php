@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css" />
     <style>
       /* ══════════════════════════════════════
-       BASE
-    ══════════════════════════════════════ */
+         BASE
+      ══════════════════════════════════════ */
       .tb-page,
       .tb-page * {
         font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
@@ -19,8 +19,8 @@
       }
 
       /* ══════════════════════════════════════
-       ANIMATIONS
-    ══════════════════════════════════════ */
+         ANIMATIONS
+      ══════════════════════════════════════ */
       @keyframes tb-gradient {
 
         0%,
@@ -252,8 +252,8 @@
       }
 
       /* ══════════════════════════════════════
-       HERO BANNER
-    ══════════════════════════════════════ */
+         HERO BANNER
+      ══════════════════════════════════════ */
       .tb-hero {
         position: relative;
         background: linear-gradient(135deg, #0a1850 0%, #13297a 25%, #1d4ed8 55%, #2563eb 80%, #3b82f6 100%);
@@ -581,8 +581,8 @@
       }
 
       /* ══════════════════════════════════════
-       TOOLBAR (Search + Tabs)
-    ══════════════════════════════════════ */
+         TOOLBAR (Search + Tabs)
+      ══════════════════════════════════════ */
       .tb-toolbar {
         display: flex;
         gap: 16px;
@@ -695,8 +695,8 @@
       }
 
       /* ══════════════════════════════════════
-       TIPS GRID
-    ══════════════════════════════════════ */
+         TIPS GRID
+      ══════════════════════════════════════ */
       .tb-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -875,8 +875,8 @@
       }
 
       /* ══════════════════════════════════════
-       QUICK ACCESS GRID
-    ══════════════════════════════════════ */
+         QUICK ACCESS GRID
+      ══════════════════════════════════════ */
       .tb-quick-section {
         margin-top: 1.5rem;
         padding-top: 1.5rem;
@@ -973,8 +973,8 @@
       }
 
       /* ══════════════════════════════════════
-       EMPTY & STATS
-    ══════════════════════════════════════ */
+         EMPTY & STATS
+      ══════════════════════════════════════ */
       .tb-empty {
         text-align: center;
         padding: 48px 16px;
@@ -1025,8 +1025,8 @@
       }
 
       /* ══════════════════════════════════════
-       DRIVER.JS CUSTOM THEME
-    ══════════════════════════════════════ */
+         DRIVER.JS CUSTOM THEME
+      ══════════════════════════════════════ */
       .driver-popover.tb-driver-theme {
         background: linear-gradient(135deg, #ffffff, #f8fafc) !important;
         border-radius: 1rem !important;
@@ -1126,10 +1126,10 @@
       }
 
       /* ══════════════════════════════════════
-       DRIVER.JS LAYOUT FIX
-       Prevent driver.js from adding overflow:hidden
-       to Filament layout containers which breaks the UI
-    ══════════════════════════════════════ */
+         DRIVER.JS LAYOUT FIX
+         Prevent driver.js from adding overflow:hidden
+         to Filament layout containers which breaks the UI
+      ══════════════════════════════════════ */
       .driver-active .fi-layout,
       .driver-active .fi-main-ctn,
       .driver-active .fi-main,
@@ -1144,8 +1144,8 @@
       }
 
       /* ══════════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════════ */
+         RESPONSIVE
+      ══════════════════════════════════════ */
       @media (max-width: 640px) {
         .tb-hero {
           padding: 1.5rem;
@@ -1204,8 +1204,8 @@
       }
 
       /* ══════════════════════════════════════
-       REDUCED MOTION
-    ══════════════════════════════════════ */
+         REDUCED MOTION
+      ══════════════════════════════════════ */
       @media (prefers-reduced-motion: reduce) {
 
         .tb-hero,
@@ -1588,8 +1588,8 @@
             // Step 1: Welcome
             steps.push({
               popover: {
-               title: `{!! __('👋 Selamat Datang di Panel Tester!') !!}`,
-description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur pengetesan</strong> PlaytoTest. Mari kita mulai!') !!}`,
+                title: `{!! __('👋 Selamat Datang di Panel Tester!') !!}`,
+                description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur pengetesan</strong> Testoplay. Mari kita mulai!') !!}`,
               }
             });
 
@@ -1749,7 +1749,7 @@ description: `{!! __('Tur ini akan memandu Anda mengenal <strong>seluruh fitur p
             steps.push({
               popover: {
                 title: '{{ __('🎉 Tur Selesai!') }}',
-                description: '{{ __('Anda siap menjelajahi seluruh fitur platform sebagai Tester hebat di PlaytoTest!<br><br>🏠 Dashboard — 🎯 Misi Saya — 💰 Dompet — 👤 Profil<br><br>Gunakan halaman ini kapan pun Anda membutuhkan panduan.') }}',
+                description: '{{ __('Anda siap menjelajahi seluruh fitur platform sebagai Tester hebat di Testoplay!<br><br>🏠 Dashboard — 🎯 Misi Saya — 💰 Dompet — 👤 Profil<br><br>Gunakan halaman ini kapan pun Anda membutuhkan panduan.') }}',
               }
             });
 

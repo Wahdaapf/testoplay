@@ -55,7 +55,7 @@ class DeveloperPanelProvider extends PanelProvider
                     950 => '23 37 84',
                 ],
             ])
-            ->favicon('/logoheader.png')
+            ->favicon('/favicon.ico')
             ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
                 return $builder->groups([
                     NavigationGroup::make(__('Manajemen Utama'))

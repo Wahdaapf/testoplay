@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Dompet extends Page
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-credit-card';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-credit-card';
     protected static ?string $navigationLabel = null;
     protected static ?string $title = null;
 
@@ -56,17 +56,17 @@ class Dompet extends Page
             ->get()
             ->map(function ($w) {
                 return [
-                    'id'        => $w->id,
-                    'point'     => $w->point,
-                    'rupiah'    => $w->rupiah,
-                    'rupiahF'   => 'Rp ' . number_format($w->rupiah, 0, ',', '.'),
-                    'metode'    => Withdraw::METHODS[$w->metode] ?? $w->metode,
+                    'id' => $w->id,
+                    'point' => $w->point,
+                    'rupiah' => $w->rupiah,
+                    'rupiahF' => 'Rp ' . number_format($w->rupiah, 0, ',', '.'),
+                    'metode' => Withdraw::METHODS[$w->metode] ?? $w->metode,
                     'nomorAkun' => $w->nomor_akun,
-                    'status'    => $w->status,
-                    'tanggal'   => $w->created_at->format('d M Y'),
-                    'waktu'     => $w->created_at->format('H:i'),
-                    'catatan'   => $w->catatan,
-                    'image'     => $w->image ? asset('storage/' . $w->image) : null,
+                    'status' => $w->status,
+                    'tanggal' => $w->created_at->format('d M Y'),
+                    'waktu' => $w->created_at->format('H:i'),
+                    'catatan' => $w->catatan,
+                    'image' => $w->image ? asset('storage/' . $w->image) : null,
                 ];
             })
             ->toArray();
@@ -100,21 +100,21 @@ class Dompet extends Page
         }
 
         $this->invoiceDetail = [
-            'id'               => $w->id,
-            'point'            => $w->point,
-            'rupiah'           => $w->rupiah,
-            'rupiahF'          => 'Rp ' . number_format($w->rupiah, 0, ',', '.'),
-            'metode'           => Withdraw::METHODS[$w->metode] ?? $w->metode,
-            'metodeKey'        => $w->metode,
-            'nomorAkun'        => $w->nomor_akun,
+            'id' => $w->id,
+            'point' => $w->point,
+            'rupiah' => $w->rupiah,
+            'rupiahF' => 'Rp ' . number_format($w->rupiah, 0, ',', '.'),
+            'metode' => Withdraw::METHODS[$w->metode] ?? $w->metode,
+            'metodeKey' => $w->metode,
+            'nomorAkun' => $w->nomor_akun,
             'xendit_payout_id' => $w->xendit_payout_id,
-            'status'           => $w->status,
-            'catatan'          => $w->catatan,
-            'tanggal'          => $w->created_at->format('d M Y'),
-            'waktu'            => $w->created_at->format('H:i'),
-            'adminNama'        => $w->admin ? $w->admin->name : '-',
-            'image'            => $w->image ? asset('storage/' . $w->image) : null,
-            'updatedAt'        => $w->updated_at->format('d M Y H:i'),
+            'status' => $w->status,
+            'catatan' => $w->catatan,
+            'tanggal' => $w->created_at->format('d M Y'),
+            'waktu' => $w->created_at->format('H:i'),
+            'adminNama' => $w->admin ? $w->admin->name : '-',
+            'image' => $w->image ? asset('storage/' . $w->image) : null,
+            'updatedAt' => $w->updated_at->format('d M Y H:i'),
         ];
 
         $this->dispatch('open-invoice-modal');
@@ -274,12 +274,12 @@ class Dompet extends Page
 
                 // Buat record withdraw
                 return Withdraw::create([
-                    'id_user'    => $user->id,
-                    'point'      => $point,
-                    'rupiah'     => $rupiah,
-                    'metode'     => $this->selectedMethod,
+                    'id_user' => $user->id,
+                    'point' => $point,
+                    'rupiah' => $rupiah,
+                    'metode' => $this->selectedMethod,
                     'nomor_akun' => trim($this->nomorAkun),
-                    'status'     => 'pending',
+                    'status' => 'pending',
                 ]);
             });
 
@@ -291,7 +291,7 @@ class Dompet extends Page
                 'account_number' => trim($this->nomorAkun),
                 'account_holder_name' => $user->name,
                 'amount' => $rupiah,
-                'description' => 'Penarikan Saldo PlaytoTest - ' . $user->name,
+                'description' => 'Penarikan Saldo Testoplay - ' . $user->name,
             ]);
 
             // Update database dengan response dari Xendit
@@ -316,8 +316,8 @@ class Dompet extends Page
 
             $withdraw->update([
                 'xendit_payout_id' => $payout['id'] ?? $payout['payout_id'] ?? null,
-                'status'           => $finalStatus,
-                'catatan'          => $catatan,
+                'status' => $finalStatus,
+                'catatan' => $catatan,
             ]);
 
             // Reset form
@@ -376,9 +376,9 @@ class Dompet extends Page
         // Format denominasi untuk view
         $denominations = collect(Withdraw::DENOMINATIONS)->map(function ($d) {
             return [
-                'point'      => $d['point'],
-                'rupiah'     => $d['rupiah'],
-                'rupiahF'    => 'Rp ' . number_format($d['rupiah'], 0, ',', '.'),
+                'point' => $d['point'],
+                'rupiah' => $d['rupiah'],
+                'rupiahF' => 'Rp ' . number_format($d['rupiah'], 0, ',', '.'),
                 'pointLabel' => number_format($d['point']) . ' Pts',
             ];
         })->toArray();
@@ -389,13 +389,13 @@ class Dompet extends Page
         $estimasiRupiah = Withdraw::pointToRupiah($currentPoints);
 
         return [
-            'namaTester'    => $user->name,
-            'totalPoin'     => $currentPoints,
+            'namaTester' => $user->name,
+            'totalPoin' => $currentPoints,
             'estimasiRupiah' => 'Rp ' . number_format($estimasiRupiah, 0, ',', '.'),
             'denominations' => $denominations,
-            'methods'       => Withdraw::METHODS,
-            'minPoint'      => Withdraw::MIN_POINT,
-            'ratePerPoint'  => Withdraw::RATE_PER_POINT,
+            'methods' => Withdraw::METHODS,
+            'minPoint' => Withdraw::MIN_POINT,
+            'ratePerPoint' => Withdraw::RATE_PER_POINT,
         ];
     }
 }

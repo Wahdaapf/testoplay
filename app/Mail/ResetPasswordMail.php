@@ -28,7 +28,7 @@ class ResetPasswordMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: __('Reset Kata Sandi Anda — PlaytoTest'),
+            subject: __('Reset Kata Sandi Anda — Testoplay'),
         );
     }
 

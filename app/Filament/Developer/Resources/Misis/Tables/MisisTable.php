@@ -22,25 +22,25 @@ class MisisTable
                         if ($record->logo) {
                             return '<img src="/storage/' . $record->logo . '" alt="Logo" class="w-9 h-9 rounded-xl object-cover" style="width:36px;height:36px;border-radius:10px;object-fit:cover;">';
                         }
-                        
+
                         $inisial = strtoupper(substr($record->nama_aplikasi, 0, 2));
                         $colors = ['blue', 'amber', 'purple', 'green'];
                         $warna = $colors[$record->id % count($colors)];
-                        
-                        $bg = match($warna) {
+
+                        $bg = match ($warna) {
                             'blue' => '#eff6ff',
                             'amber' => '#fffbeb',
                             'purple' => '#faf5ff',
                             default => '#f0fdf4',
                         };
-                        $text = match($warna) {
+                        $text = match ($warna) {
                             'blue' => '#2563eb',
                             'amber' => '#d97706',
                             'purple' => '#7e22ce',
                             default => '#16a34a',
                         };
-                        
-                        return '<div style="width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;background:'.$bg.';color:'.$text.';">' . $inisial . '</div>';
+
+                        return '<div style="width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;background:' . $bg . ';color:' . $text . ';">' . $inisial . '</div>';
                     }),
 
                 TextColumn::make('nama_aplikasi')
@@ -52,7 +52,7 @@ class MisisTable
                 TextColumn::make('paket.name')
                     ->label('Paket')
                     ->badge()
-                    ->color(fn ($state): string => match (true) {
+                    ->color(fn($state): string => match (true) {
                         str_contains(strtolower($state ?? ''), 'premium') => 'success',
                         str_contains(strtolower($state ?? ''), 'basic') => 'info',
                         str_contains(strtolower($state ?? ''), 'gratis') => 'gray',
@@ -62,7 +62,7 @@ class MisisTable
 
                 TextColumn::make('kapasitas')
                     ->label('Kapasitas')
-                    ->formatStateUsing(fn ($state) => $state . '/' . config('missions.max_capacity', 20))
+                    ->formatStateUsing(fn($state) => $state . '/' . config('missions.max_capacity', 20))
                     ->suffix(' tester')
                     ->sortable(),
 
@@ -90,7 +90,7 @@ class MisisTable
             ])
             ->filters([])
             ->recordActions([
-                 \Filament\Actions\Action::make('mulai_misi')
+                \Filament\Actions\Action::make('mulai_misi')
                     ->label('Mulai Misi')
                     ->icon('heroicon-o-play')
                     ->color('success')
@@ -107,7 +107,7 @@ class MisisTable
                             ->required()
                             ->maxLength(255),
                     ])
-                    ->visible(fn (\App\Models\Misi $record): bool => $record->status === 'closed')
+                    ->visible(fn(\App\Models\Misi $record): bool => $record->status === 'closed')
                     ->action(function (\App\Models\Misi $record, array $data) {
                         // 1. Jika paket trusted badge = true, ubah semua tester pending/reviewing menjadi accepted
                         if ($record->paket && $record->paket->trusted_badge) {
@@ -131,7 +131,7 @@ class MisisTable
                                     'id_misi' => $record->id,
                                     'id_user' => $tester->id_user,
                                     'hari_ke' => $i,
-                                    'status'  => 'notdone',
+                                    'status' => 'notdone',
                                     'created_at' => $now->copy()->addDays($i - 1),
                                     'updated_at' => $now->copy()->addDays($i - 1),
                                 ];
@@ -158,7 +158,7 @@ class MisisTable
                             if ($tester->user && $tester->user->email) {
                                 try {
                                     \Illuminate\Support\Facades\Mail::to($tester->user->email)->send(new \App\Mail\ContactMail(
-                                        'Pengujian Aplikasi Dimulai — PlaytoTest',
+                                        'Pengujian Aplikasi Dimulai — Testoplay',
                                         'Misi Pengujian Dimulai!',
                                         "Halo {$tester->user->name},\n\nMisi pengujian untuk aplikasi \"{$record->nama_aplikasi}\" telah resmi dimulai oleh developer.\nSilakan mulai mengunduh aplikasi dan selesaikan tugas harian Anda selama 14 hari ke depan.",
                                         'Lihat Misi Saya',
@@ -183,7 +183,7 @@ class MisisTable
                     ->color('info')
                     ->iconButton()
                     ->tooltip('Kelola Tester')
-                    ->url(fn (\App\Models\Misi $record): string => \App\Filament\Developer\Resources\Misis\MisiResource::getUrl('kelola-tester', ['record' => $record])),
+                    ->url(fn(\App\Models\Misi $record): string => \App\Filament\Developer\Resources\Misis\MisiResource::getUrl('kelola-tester', ['record' => $record])),
                 EditAction::make()
                     ->iconButton()
                     ->tooltip('Edit'),

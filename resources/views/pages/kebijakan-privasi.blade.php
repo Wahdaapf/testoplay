@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ __('Kebijakan Privasi') }} – PlaytoTest</title>
-  <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+  <title>{{ __('Kebijakan Privasi') }} – Testoplay</title>
+  <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
   <meta name="description"
-    content="{{ __('Kebijakan privasi PlaytoTest menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.') }}">
+    content="{{ __('Kebijakan privasi Testoplay menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda.') }}">
   <script>
     (function () {
       var t = localStorage.getItem('pt-theme');
@@ -438,7 +438,8 @@
     class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-slate-900/95 border-b border-slate-100 dark:border-slate-800 backdrop-blur-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="{{ url('/') }}" class="flex items-center">
-        <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto" />
+        <img src="{{ asset('logo.png') }}" alt="Testoplay" class="h-10 w-auto dark:hidden" />
+        <img src="{{ asset('logo-dark.png') }}" alt="Testoplay" class="h-10 w-auto hidden dark:block" />
       </a>
       <div class="flex items-center gap-3">
         <!-- Back link -->
@@ -525,7 +526,7 @@
     <div class="page-card">
       <div class="prose">
         <p>
-          {{ __('PlaytoTest ("kami", "kita") menghargai privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi Anda saat menggunakan platform kami.') }}
+          {{ __('Testoplay ("kami", "kita") menghargai privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi Anda saat menggunakan platform kami.') }}
         </p>
 
         <h2>1. {{ __('Informasi yang Kami Kumpulkan') }}</h2>
@@ -585,20 +586,25 @@
 
         <h2>8. {{ __('Hubungi Kami') }}</h2>
         <p>{{ __('Jika Anda memiliki pertanyaan tentang kebijakan privasi ini, silakan hubungi kami di:') }} <a
-            href="mailto:privacy@playtotest.com">privacy@playtotest.com</a></p>
+            href="mailto:privacy@testoplay.com">privacy@testoplay.com</a></p>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-500 text-center py-6 px-4 text-xs mt-4">
-    <p>© 2026 <span class="text-slate-300 font-semibold">PlaytoTest</span>.
-      {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+  <footer
+    class="bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 text-center py-6 px-4 text-xs mt-4 transition-colors duration-200">
+    <p>© 2026 <span class="text-slate-700 dark:text-slate-300 font-semibold">Testoplay</span>.
+      {{ __('Hak cipta dilindungi undang-undang.') }}
+    </p>
     <div class="flex flex-wrap justify-center gap-4 mt-2">
-      <a href="{{ route('kebijakan-privasi') }}" class="hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
-      <a href="{{ route('syarat-ketentuan') }}" class="hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
-      <a href="{{ route('faq') }}" class="hover:text-white transition">FAQ</a>
-      <a href="{{ route('hubungi-kami') }}" class="hover:text-white transition">{{ __('Hubungi Kami') }}</a>
+      <a href="{{ route('kebijakan-privasi') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
+      <a href="{{ route('syarat-ketentuan') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
+      <a href="{{ route('faq') }}" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
+      <a href="{{ route('hubungi-kami') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Hubungi Kami') }}</a>
     </div>
   </footer>
 

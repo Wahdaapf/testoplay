@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlaytoTest – Closed Testing Partner for Indonesian Developers & Testers</title>
-  <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+  <title>Testoplay – Closed Testing Partner for Indonesian Developers & Testers</title>
+  <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
 
   <!-- ─── Google Fonts: Inter ─── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -345,7 +345,8 @@
 
         <!-- Logo -->
         <a href="/" class="flex items-center select-none animate-fadeUp">
-          <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
+          <img src="{{ asset('logo.png') }}" alt="Testoplay" class="h-12 w-auto object-contain dark:hidden" />
+          <img src="{{ asset('logo-dark.png') }}" alt="Testoplay" class="h-12 w-auto object-contain hidden dark:block" />
         </a>
 
         <!-- Desktop Menu -->
@@ -493,7 +494,7 @@
 
         <!-- Sub-headline -->
         <p class="text-lg text-blue-100 leading-relaxed max-w-lg">
-          {{ __('PlaytoTest adalah platform kolaborasi antara') }} <strong class="text-white">Developers</strong> {{ __('yang membutuhkan tester aktif dan') }} <strong class="text-white">Testers</strong> {{ __('yang ingin berkontribusi sambil belajar — dibangun di atas konsep') }} <em>{{ __('Project Based Learning') }}</em>.
+          {{ __('Testoplay adalah platform kolaborasi antara') }} <strong class="text-white">Developers</strong> {{ __('yang membutuhkan tester aktif dan') }} <strong class="text-white">Testers</strong> {{ __('yang ingin berkontribusi sambil belajar — dibangun di atas konsep') }} <em>{{ __('Project Based Learning') }}</em>.
         </p>
 
         <!-- Dual CTA -->
@@ -669,7 +670,7 @@
       <div class="text-center mb-10 reveal">
         <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-widest">{{ __('Manfaat') }}</span>
         <h2 class="text-3xl sm:text-4xl font-black text-slate-800 dark:text-white mt-2">{{ __('Platform untuk Semua Orang') }}</h2>
-        <p class="text-slate-500 dark:text-slate-400 mt-3 max-w-xl mx-auto">{{ __('Pilih perspektif Anda dan temukan bagaimana PlaytoTest memberikan nilai nyata.') }}</p>
+        <p class="text-slate-500 dark:text-slate-400 mt-3 max-w-xl mx-auto">{{ __('Pilih perspektif Anda dan temukan bagaimana Testoplay memberikan nilai nyata.') }}</p>
       </div>
 
       <!-- ── Tab Switcher ── -->
@@ -745,7 +746,7 @@
               <i class="fa-solid fa-people-group text-brand-600 dark:text-brand-400 text-xl"></i>
             </div>
             <h4 class="font-bold text-slate-800 dark:text-white mb-2">{{ __('Komunitas Aktif') }}</h4>
-            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{{ __('Bergabunglah dengan ribuan tester dan developer di komunitas PlaytoTest — berbagi pengetahuan, berdiskusi, dan temukan peluang kolaborasi.') }}</p>
+            <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{{ __('Bergabunglah dengan ribuan tester dan developer di komunitas Testoplay — berbagi pengetahuan, berdiskusi, dan temukan peluang kolaborasi.') }}</p>
           </div>
 
         </div>
@@ -798,7 +799,7 @@
             <li><i class="fa-solid fa-circle-check text-green-500"></i><span>{{ __('Akses ke 20 Tester Aktif & Terverifikasi') }}</span></li>
             <li><i class="fa-solid fa-circle-check text-green-500"></i><span>{{ __('14 Hari Pengujian Penuh Berturut-turut') }}</span></li>
             <li><i class="fa-solid fa-circle-check text-green-500"></i><span>{{ __('Laporan Pengujian Standar') }}</span></li>
-            <li><i class="fa-solid fa-circle-check text-green-500"></i><span>{{ __('Dukungan Komunitas PlaytoTest') }}</span></li>
+            <li><i class="fa-solid fa-circle-check text-green-500"></i><span>{{ __('Dukungan Komunitas Testoplay') }}</span></li>
           </ul>
 
           <a href="#" class="block w-full text-center py-3.5 rounded-xl font-bold text-brand-700 dark:text-brand-400 border-2 border-brand-600 dark:border-brand-500 hover:bg-brand-600 hover:text-white transition duration-300 text-sm">
@@ -890,7 +891,7 @@
           <div class="flex gap-1 text-yellow-400 mb-3 text-sm">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">"{{ __('Saya pernah mencoba platform lain dan gagal. Dengan PlaytoTest, aplikasi saya lulus dalam 14 hari dan sekarang sudah live di Play Store!') }}"</p>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">"{{ __('Saya pernah mencoba platform lain dan gagal. Dengan Testoplay, aplikasi saya lulus dalam 14 hari dan sekarang sudah live di Play Store!') }}"</p>
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 bg-brand-200 dark:bg-brand-900/50 rounded-full flex items-center justify-center font-bold text-brand-700 dark:text-brand-300 text-sm">RD</div>
             <div>
@@ -904,7 +905,7 @@
           <div class="flex gap-1 text-yellow-400 mb-3 text-sm">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">"{{ __('Sebagai tester, saya mendapatkan pengalaman QA nyata dan bisa menambahkannya ke CV saya. Komunitas PlaytoTest sangat mendukung!') }}"</p>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">"{{ __('Sebagai tester, saya mendapatkan pengalaman QA nyata dan bisa menambahkannya ke CV saya. Komunitas Testoplay sangat mendukung!') }}"</p>
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 bg-green-200 dark:bg-green-900/50 rounded-full flex items-center justify-center font-bold text-green-700 dark:text-green-300 text-sm">AN</div>
             <div>
@@ -952,7 +953,7 @@
       </h2>
 
       <p class="text-blue-100 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-        {{ __('Atau Anda ingin mulai membantu developer lain sambil membangun pengalaman QA Anda? Bergabunglah dengan') }} <strong class="text-white">PlaytoTest</strong> {{ __('now and become part of Indonesia\'s best testing ecosystem.') }}
+        {{ __('Atau Anda ingin mulai membantu developer lain sambil membangun pengalaman QA Anda? Bergabunglah dengan') }} <strong class="text-white">Testoplay</strong> {{ __('now and become part of Indonesia\'s best testing ecosystem.') }}
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -984,28 +985,29 @@
   <!-- ════════════════════════════════════════════
      8. FOOTER
      ════════════════════════════════════════════ -->
-  <footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-transparent dark:border-slate-800">
+  <footer class="bg-white dark:bg-slate-950 text-slate-500 dark:text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800 transition-colors duration-200">
     <div class="max-w-7xl mx-auto">
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-slate-800 dark:border-slate-800">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-slate-100 dark:border-slate-800">
 
         <!-- Brand -->
         <div class="md:col-span-2">
           <div class="flex items-center mb-4">
-            <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-12 w-auto object-contain" />
+            <img src="{{ asset('logo.png') }}" alt="Testoplay" class="h-12 w-auto object-contain dark:hidden" />
+            <img src="{{ asset('logo-dark.png') }}" alt="Testoplay" class="h-12 w-auto object-contain hidden dark:block" />
           </div>
-          <p class="text-sm leading-relaxed max-w-xs">{{ __('Platform kolaborasi untuk Developer dan Tester Indonesia berbasis Project Based Learning untuk memenuhi persyaratan Google Play Closed Testing.') }}</p>
+          <p class="text-sm leading-relaxed max-w-xs text-slate-500 dark:text-slate-400">{{ __('Platform kolaborasi untuk Developer dan Tester Indonesia berbasis Project Based Learning untuk memenuhi persyaratan Google Play Closed Testing.') }}</p>
           <div class="flex gap-3 mt-5">
-            <a href="#" class="w-9 h-9 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-brand-600 transition duration-200" aria-label="Instagram">
+            <a href="#" class="w-9 h-9 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 dark:hover:text-white transition duration-200" aria-label="Instagram">
               <i class="fa-brands fa-instagram text-sm"></i>
             </a>
-            <a href="#" class="w-9 h-9 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-brand-600 transition duration-200" aria-label="Twitter/X">
+            <a href="#" class="w-9 h-9 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 dark:hover:text-white transition duration-200" aria-label="Twitter/X">
               <i class="fa-brands fa-x-twitter text-sm"></i>
             </a>
-            <a href="#" class="w-9 h-9 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-brand-600 transition duration-200" aria-label="LinkedIn">
+            <a href="#" class="w-9 h-9 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 dark:hover:text-white transition duration-200" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in text-sm"></i>
             </a>
-            <a href="#" class="w-9 h-9 bg-slate-800 rounded-xl flex items-center justify-center hover:bg-brand-600 transition duration-200" aria-label="Telegram">
+            <a href="#" class="w-9 h-9 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300 rounded-xl flex items-center justify-center hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 dark:hover:text-white transition duration-200" aria-label="Telegram">
               <i class="fa-brands fa-telegram text-sm"></i>
             </a>
           </div>
@@ -1013,32 +1015,32 @@
 
         <!-- Platform links -->
         <div>
-          <h5 class="text-white font-bold text-sm mb-4">{{ __('Platform') }}</h5>
+          <h5 class="text-slate-900 dark:text-white font-bold text-sm mb-4">{{ __('Platform') }}</h5>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="#how-it-works" class="hover:text-white transition">{{ __('Cara Kerja') }}</a></li>
-            <li><a href="#benefits" class="hover:text-white transition">{{ __('Manfaat') }}</a></li>
-            <li><a href="#pricing" class="hover:text-white transition">{{ __('Harga') }}</a></li>
-            <li><a href="#hero" class="hover:text-white transition">{{ __('Dasbor') }}</a></li>
-            <li><a href="#testi" class="hover:text-white transition">{{ __('Blog') }}</a></li>
+            <li><a href="#how-it-works" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Cara Kerja') }}</a></li>
+            <li><a href="#benefits" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Manfaat') }}</a></li>
+            <li><a href="#pricing" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Harga') }}</a></li>
+            <li><a href="#hero" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Dasbor') }}</a></li>
+            <li><a href="#testi" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Blog') }}</a></li>
           </ul>
         </div>
 
         <!-- Legal links -->
         <div>
-          <h5 class="text-white font-bold text-sm mb-4">{{ __('Legal & Dukungan') }}</h5>
+          <h5 class="text-slate-900 dark:text-white font-bold text-sm mb-4">{{ __('Legal & Dukungan') }}</h5>
           <ul class="space-y-2.5 text-sm">
-            <li><a href="{{ route('kebijakan-privasi') }}" class="hover:text-white transition">{{ __('Kebijakan Privasi') }}</a></li>
-            <li><a href="{{ route('syarat-ketentuan') }}" class="hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a></li>
-            <li><a href="{{ route('faq') }}" class="hover:text-white transition">{{ __('FAQ') }}</a></li>
-            <li><a href="{{ route('hubungi-kami') }}" class="hover:text-white transition">{{ __('Hubungi Kami') }}</a></li>
+            <li><a href="{{ route('kebijakan-privasi') }}" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Kebijakan Privasi') }}</a></li>
+            <li><a href="{{ route('syarat-ketentuan') }}" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a></li>
+            <li><a href="{{ route('faq') }}" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('FAQ') }}</a></li>
+            <li><a href="{{ route('hubungi-kami') }}" class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Hubungi Kami') }}</a></li>
           </ul>
         </div>
 
       </div>
 
       <!-- Bottom bar -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-        <p>© 2026 <span class="text-slate-400 font-semibold">PlaytoTest</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+        <p>© 2026 <span class="text-slate-700 dark:text-slate-400 font-semibold">Testoplay</span>. {{ __('Hak cipta dilindungi undang-undang.') }}</p>
         <p>{{ __('Dibuat dengan') }} <i class="fa-solid fa-heart text-red-500 mx-1"></i> {{ __('untuk Developer & Tester Indonesia.') }}</p>
       </div>
 

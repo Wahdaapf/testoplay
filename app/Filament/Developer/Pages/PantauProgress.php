@@ -14,13 +14,13 @@ use Carbon\Carbon;
 
 class PantauProgress extends Page
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-chart-bar';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-chart-bar';
     public static function getNavigationLabel(): string
     {
         return __('Pantau Progres');
     }
 
-    public function getTitle(): string | \Illuminate\Contracts\Support\Htmlable
+    public function getTitle(): string|\Illuminate\Contracts\Support\Htmlable
     {
         return __('Pantau Progres Tester');
     }
@@ -28,18 +28,18 @@ class PantauProgress extends Page
     protected static ?string $navigationLabel = 'Pantau Progres';
     protected static ?string $title = 'Pantau Progres Tester';
     protected static ?string $slug = 'pantau-progress';
-    protected static bool $shouldRegisterNavigation = false; 
+    protected static bool $shouldRegisterNavigation = false;
 
     protected string $view = 'filament.developer.pages.pantau-progress';
 
-    public ?int $selectedMisiId   = null;
+    public ?int $selectedMisiId = null;
     public ?array $selectedSubData = null;
-    public ?int $selectedHariKe   = null;
-    public string $alasanTolak    = '';
+    public ?int $selectedHariKe = null;
+    public string $alasanTolak = '';
 
     // Slideout tester info panel
-    public ?int   $slideoutMaId  = null;
-    public ?array $slideoutData  = null;
+    public ?int $slideoutMaId = null;
+    public ?array $slideoutData = null;
 
     // Timestamp refresh tracking
     public string $lastRefreshed = '';
@@ -54,7 +54,7 @@ class PantauProgress extends Page
     {
         $this->slideoutMaId = $maId;
         $this->slideoutData = $this->buildSlideoutData($maId);
-        $this->alasanTolak  = '';
+        $this->alasanTolak = '';
     }
 
     public function closeSlideout(): void
@@ -65,51 +65,54 @@ class PantauProgress extends Page
 
     private function buildSlideoutData(int $maId): array
     {
-        $ma   = MisiAnggota::with('user')->find($maId);
+        $ma = MisiAnggota::with('user')->find($maId);
         $misi = Misi::find($ma?->id_misi);
 
-        if (! $ma || ! $misi) return [];
+        if (!$ma || !$misi)
+            return [];
 
         $subs = MisiSub::where('id_misi', $ma->id_misi)
             ->where('id_user', $ma->id_user)
             ->orderBy('hari_ke')
             ->get()
-            ->map(fn ($s) => [
-                'id'             => $s->id,
-                'hari_ke'        => $s->hari_ke,
-                'status'         => $s->status,
-                'image'          => $s->image ? '/storage/' . $s->image : null,
+            ->map(fn($s) => [
+                'id' => $s->id,
+                'hari_ke' => $s->hari_ke,
+                'status' => $s->status,
+                'image' => $s->image ? '/storage/' . $s->image : null,
                 'catatan_tester' => $s->catatan_tester,
-                'alasan_tolak'   => $s->alasan_tolak,
-                'waktu'          => $s->updated_at?->format('d M Y H:i'),
+                'alasan_tolak' => $s->alasan_tolak,
+                'waktu' => $s->updated_at?->format('d M Y H:i'),
             ])->toArray();
 
-        $doneCount    = collect($subs)->where('status', 'done')->count();
+        $doneCount = collect($subs)->where('status', 'done')->count();
         $pendingCount = collect($subs)->where('status', 'pending')->count();
-        $allDone      = $doneCount >= 14;
+        $allDone = $doneCount >= 14;
 
         return [
-            'ma_id'         => $ma->id,
-            'tester_nama'   => $ma->user->name ?? '-',
-            'tester_email'  => $ma->user->email ?? '-',
-            'status'        => $ma->status,
-            'done_count'    => $doneCount,
+            'ma_id' => $ma->id,
+            'tester_nama' => $ma->user->name ?? '-',
+            'tester_email' => $ma->user->email ?? '-',
+            'status' => $ma->status,
+            'done_count' => $doneCount,
             'pending_count' => $pendingCount,
-            'all_done'      => $allDone,
-            'misi_id'       => $misi->id,
-            'misi_nama'     => $misi->nama_aplikasi,
-            'subs'          => $subs,
+            'all_done' => $allDone,
+            'misi_id' => $misi->id,
+            'misi_nama' => $misi->nama_aplikasi,
+            'subs' => $subs,
         ];
     }
 
     public function generateAiReport(?int $hariKe = null): void
     {
-        if (! $this->selectedMisiId) return;
+        if (!$this->selectedMisiId)
+            return;
 
         $misi = Misi::with('paket')->find($this->selectedMisiId);
-        if (! $misi) return;
+        if (!$misi)
+            return;
 
-        if (! $misi->paket?->ai_report) {
+        if (!$misi->paket?->ai_report) {
             Notification::make()
                 ->title(__('Fitur Tidak Tersedia'))
                 ->body(__('AI Report hanya tersedia untuk paket Pro. Upgrade paket untuk menggunakan fitur ini.'))
@@ -177,14 +180,14 @@ class PantauProgress extends Page
         $sub = MisiSub::find($subId);
         if ($sub) {
             $this->selectedSubData = [
-                'id'             => $sub->id,
-                'image'          => '/storage/' . $sub->image,
-                'tester_nama'    => $testerNama,
-                'hari_ke'        => $hariKe,
-                'status'         => $sub->status,
-                'desc'           => $sub->desc,
+                'id' => $sub->id,
+                'image' => '/storage/' . $sub->image,
+                'tester_nama' => $testerNama,
+                'hari_ke' => $hariKe,
+                'status' => $sub->status,
+                'desc' => $sub->desc,
                 'catatan_tester' => $sub->catatan_tester,
-                'alasan_tolak'   => $sub->alasan_tolak,
+                'alasan_tolak' => $sub->alasan_tolak,
             ];
         }
         $this->alasanTolak = '';
@@ -193,7 +196,7 @@ class PantauProgress extends Page
     public function closeValidationModal()
     {
         $this->selectedSubData = null;
-        $this->alasanTolak     = '';
+        $this->alasanTolak = '';
     }
 
     public function acceptSubmission()
@@ -218,8 +221,8 @@ class PantauProgress extends Page
             $sub = MisiSub::find($this->selectedSubData['id']);
             if ($sub) {
                 $sub->update([
-                    'status'       => 'notdone',
-                    'image'        => null,
+                    'status' => 'notdone',
+                    'image' => null,
                     'alasan_tolak' => $this->alasanTolak ?: __('Screenshot ditolak oleh developer.'),
                 ]);
             }
@@ -249,8 +252,8 @@ class PantauProgress extends Page
         $sub = MisiSub::find($subId);
         if ($sub) {
             $sub->update([
-                'status'       => 'notdone',
-                'image'        => null,
+                'status' => 'notdone',
+                'image' => null,
                 'alasan_tolak' => $alasan ?: __('Screenshot ditolak. Silakan upload ulang.'),
             ]);
             if ($this->slideoutMaId) {
@@ -296,7 +299,7 @@ class PantauProgress extends Page
         }
 
         $misi = Misi::where('id_user', $userId)->find($this->selectedMisiId);
-        
+
         if (!$misi) {
             $this->selectedMisiId = null;
             return $this->getViewData();
@@ -317,7 +320,8 @@ class PantauProgress extends Page
 
         foreach ($misiAnggotas as $ma) {
             $u = $ma->user;
-            if (!$u) continue;
+            if (!$u)
+                continue;
 
             $subs = $semuaSubs->where('id_user', $u->id);
 
@@ -326,10 +330,10 @@ class PantauProgress extends Page
                 $sub = $subs->firstWhere('hari_ke', $h);
                 if ($sub) {
                     $days[$h] = [
-                        'status'         => $sub->status,
-                        'sub_id'         => $sub->id,
+                        'status' => $sub->status,
+                        'sub_id' => $sub->id,
                         'catatan_tester' => $sub->catatan_tester,
-                        'has_image'      => ! empty($sub->image),
+                        'has_image' => !empty($sub->image),
                     ];
                 } else {
                     $days[$h] = ['status' => 'notdone'];
@@ -338,7 +342,7 @@ class PantauProgress extends Page
 
             $today = now()->format('Y-m-d');
             $lastSub = $subs->sortByDesc('hari_ke')->first();
-            
+
             if ($lastSub) {
                 if ($lastSub->created_at && $lastSub->created_at->format('Y-m-d') === $today) {
                     $hariAktif = $lastSub->hari_ke;
@@ -352,24 +356,24 @@ class PantauProgress extends Page
             $colors = ['blue', 'amber', 'purple', 'green'];
             $warna = $colors[$misi->id % count($colors)];
 
-            $doneCount    = $subs->where('status', 'done')->count();
+            $doneCount = $subs->where('status', 'done')->count();
             $pendingCount = $subs->where('status', 'pending')->count();
-            $allDone      = $doneCount >= 14;
+            $allDone = $doneCount >= 14;
 
             $kampanyeList[] = [
-                'ma_id'         => $ma->id,
-                'misi_nama'     => $misi->nama_aplikasi,
-                'tester_nama'   => $u->name,
-                'tester_email'  => $u->email,
-                'logo'          => $misi->logo,
-                'inisial'       => strtoupper(substr($misi->nama_aplikasi, 0, 1) . substr($u->name, 0, 1)),
-                'warna'         => $warna,
-                'status'        => $ma->status,
-                'hariAktif'     => $hariAktif,
-                'days'          => $days,
-                'done_count'    => $doneCount,
+                'ma_id' => $ma->id,
+                'misi_nama' => $misi->nama_aplikasi,
+                'tester_nama' => $u->name,
+                'tester_email' => $u->email,
+                'logo' => $misi->logo,
+                'inisial' => strtoupper(substr($misi->nama_aplikasi, 0, 1) . substr($u->name, 0, 1)),
+                'warna' => $warna,
+                'status' => $ma->status,
+                'hariAktif' => $hariAktif,
+                'days' => $days,
+                'done_count' => $doneCount,
                 'pending_count' => $pendingCount,
-                'all_done'      => $allDone,
+                'all_done' => $allDone,
             ];
         }
 
@@ -381,24 +385,24 @@ class PantauProgress extends Page
             ->get()
             ->map(function ($sub) {
                 return [
-                    'id'             => $sub->id,
-                    'tester_nama'    => $sub->user->name ?? 'Unknown',
-                    'hari_ke'        => $sub->hari_ke,
-                    'image'          => '/storage/' . $sub->image,
+                    'id' => $sub->id,
+                    'tester_nama' => $sub->user->name ?? 'Unknown',
+                    'hari_ke' => $sub->hari_ke,
+                    'image' => '/storage/' . $sub->image,
                     'catatan_tester' => $sub->catatan_tester,
-                    'waktu'          => $sub->created_at ? $sub->created_at->diffForHumans() : '',
+                    'waktu' => $sub->created_at ? $sub->created_at->diffForHumans() : '',
                 ];
             })->toArray();
 
         // Hitung max hari_ke dari semua tester
         $maxHariKe = MisiSub::where('id_misi', $misi->id)->max('hari_ke');
-        
+
         if ($maxHariKe) {
             $lastMaxSub = MisiSub::where('id_misi', $misi->id)
                 ->where('hari_ke', $maxHariKe)
                 ->latest()
                 ->first();
-                
+
             if ($lastMaxSub && $lastMaxSub->created_at && $lastMaxSub->created_at->format('Y-m-d') === now()->format('Y-m-d')) {
                 $hariToday = $maxHariKe;
             } else {
@@ -436,23 +440,23 @@ class PantauProgress extends Page
             ->values();
 
         $canFinish = count($kampanyeList) > 0 &&
-            collect($kampanyeList)->every(fn ($k) => $k['all_done'] || $k['status'] === 'selesai');
+            collect($kampanyeList)->every(fn($k) => $k['all_done'] || $k['status'] === 'selesai');
 
         return [
-            'isDetail'           => true,
-            'misiDetail'         => $misi,
-            'kampanyeList'       => $kampanyeList,
+            'isDetail' => true,
+            'misiDetail' => $misi,
+            'kampanyeList' => $kampanyeList,
             'pendingSubmissions' => $pendingSubmissions,
-            'hariToday'          => $hariToday,
-            'hasOneCompletedUser'=> $hasOneCompletedUser,
-            'canFinish'          => $canFinish,
-            'slideoutData'       => $this->slideoutData,
-            'lastRefreshed'      => $this->lastRefreshed,
-            'hasAiFeature'       => $hasAiFeature,
-            'aiReport'           => $aiReport,
-            'allAiReports'       => $allAiReports,
+            'hariToday' => $hariToday,
+            'hasOneCompletedUser' => $hasOneCompletedUser,
+            'canFinish' => $canFinish,
+            'slideoutData' => $this->slideoutData,
+            'lastRefreshed' => $this->lastRefreshed,
+            'hasAiFeature' => $hasAiFeature,
+            'aiReport' => $aiReport,
+            'allAiReports' => $allAiReports,
             'hariDenganFeedback' => $hariDenganFeedback,
-            'selectedHariKe'     => $this->selectedHariKe,
+            'selectedHariKe' => $this->selectedHariKe,
         ];
     }
 
@@ -461,7 +465,7 @@ class PantauProgress extends Page
      */
     protected function checkTestersProgress(Misi $misi)
     {
-        $today     = Carbon::today()->toDateString();
+        $today = Carbon::today()->toDateString();
         $yesterday = Carbon::yesterday()->toDateString();
 
         // Ambil semua anggota yang masih aktif (accepted)
@@ -492,13 +496,13 @@ class PantauProgress extends Page
 
                 if ($totalSub < 14) {
                     $ma->update(['status' => 'failed']);
-                    
+
                     // Kirim email notifikasi bahwa tester gagal karena absen submit tugas
                     $user = $ma->user;
                     if ($user && $user->email) {
                         try {
                             \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\ContactMail(
-                                'Pengujian Aplikasi Gagal — PlaytoTest',
+                                'Pengujian Aplikasi Gagal — Testoplay',
                                 'Misi Pengujian Gagal',
                                 "Halo {$user->name},\n\nAnda terdeteksi tidak mengirimkan laporan tugas harian pada hari kemarin untuk pengujian aplikasi \"" . $misi->nama_aplikasi . "\".\nSesuai aturan, Anda dinyatakan gagal menyelesaikan pengujian ini.",
                                 'Lihat Riwayat Misi',
@@ -511,7 +515,7 @@ class PantauProgress extends Page
 
                     // Kurangi kapasitas misi (tester berkurang)
                     $misi->decrement('kapasitas');
-                    
+
                     // Jika misi sebelumnya closed karena penuh, buka kembali
                     if ($misi->status === 'closed') {
                         $misi->update(['status' => 'open']);
@@ -562,10 +566,12 @@ class PantauProgress extends Page
 
     public function finishMission()
     {
-        if (!$this->selectedMisiId) return;
+        if (!$this->selectedMisiId)
+            return;
 
         $misi = Misi::find($this->selectedMisiId);
-        if (!$misi) return;
+        if (!$misi)
+            return;
 
         // 1. Ambil semua tester yang masih aktif (accepted/progress)
         $testers = MisiAnggota::where('id_misi', $misi->id)
@@ -588,7 +594,7 @@ class PantauProgress extends Page
             if ($user && $user->email) {
                 try {
                     \Illuminate\Support\Facades\Mail::to($user->email)->send(new \App\Mail\ContactMail(
-                        'Pengujian Aplikasi Selesai — PlaytoTest',
+                        'Pengujian Aplikasi Selesai — Testoplay',
                         'Misi Pengujian Selesai!',
                         "Halo {$user->name},\n\nDeveloper telah menyatakan pengujian aplikasi \"" . $misi->nama_aplikasi . "\" selesai.\nPoin dan badge hasil pengujian Anda telah dicairkan ke saldo Anda. Terima kasih atas kontribusi Anda!",
                         'Lihat Dompet Saya',
@@ -606,7 +612,7 @@ class PantauProgress extends Page
                     ['id_user' => $ma->id_user],
                     ['updated_at' => now()]
                 );
-                
+
                 // Tambah point & badge secara direct ke database
                 \DB::table('user_balance')->where('id_user', $ma->id_user)->increment('point', $misi->point);
                 \DB::table('user_balance')->where('id_user', $ma->id_user)->increment('badge', 1);

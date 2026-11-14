@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ __('Syarat & Ketentuan') }} – PlaytoTest</title>
-  <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+  <title>{{ __('Syarat & Ketentuan') }} – Testoplay</title>
+  <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
   <meta name="description"
-    content="{{ __('Syarat dan ketentuan penggunaan platform PlaytoTest yang mengatur hak dan kewajiban pengguna.') }}">
+    content="{{ __('Syarat dan ketentuan penggunaan platform Testoplay yang mengatur hak dan kewajiban pengguna.') }}">
   <script>
     (function () {
       var t = localStorage.getItem('pt-theme');
@@ -432,7 +432,8 @@
     class="fixed top-0 inset-x-0 z-50 bg-white/95 dark:bg-slate-900/95 border-b border-slate-100 dark:border-slate-800 backdrop-blur-sm">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
       <a href="{{ url('/') }}" class="flex items-center">
-        <img src="{{ asset('logo.png') }}" alt="PlaytoTest" class="h-10 w-auto" />
+        <img src="{{ asset('logo.png') }}" alt="Testoplay" class="h-10 w-auto dark:hidden" />
+        <img src="{{ asset('logo-dark.png') }}" alt="Testoplay" class="h-10 w-auto hidden dark:block" />
       </a>
       <div class="flex items-center gap-3">
         <a href="{{ url('/') }}"
@@ -515,17 +516,17 @@
     <div class="page-card">
       <div class="prose">
         <p>
-          {{ __('Selamat datang di PlaytoTest. Dengan mengakses atau menggunakan platform ini, Anda menyetujui syarat dan ketentuan yang tercantum di bawah ini. Harap baca dengan cermat sebelum menggunakan layanan kami.') }}
+          {{ __('Selamat datang di Testoplay. Dengan mengakses atau menggunakan platform ini, Anda menyetujui syarat dan ketentuan yang tercantum di bawah ini. Harap baca dengan cermat sebelum menggunakan layanan kami.') }}
         </p>
 
         <h2>1. {{ __('Penerimaan Syarat') }}</h2>
         <p>
-          {{ __('Dengan mendaftarkan akun atau menggunakan layanan PlaytoTest, Anda menyatakan bahwa Anda berusia minimal 17 tahun dan memiliki kapasitas hukum untuk menyetujui syarat ini. Jika Anda tidak setuju, jangan gunakan platform ini.') }}
+          {{ __('Dengan mendaftarkan akun atau menggunakan layanan Testoplay, Anda menyatakan bahwa Anda berusia minimal 17 tahun dan memiliki kapasitas hukum untuk menyetujui syarat ini. Jika Anda tidak setuju, jangan gunakan platform ini.') }}
         </p>
 
         <h2>2. {{ __('Deskripsi Layanan') }}</h2>
         <p>
-          {{ __('PlaytoTest adalah platform yang menghubungkan developer aplikasi Android dengan tester untuk memenuhi persyaratan Google Play Closed Testing. Kami menyediakan:') }}
+          {{ __('Testoplay adalah platform yang menghubungkan developer aplikasi Android dengan tester untuk memenuhi persyaratan Google Play Closed Testing. Kami menyediakan:') }}
         </p>
         <ul>
           <li>{{ __('Sistem manajemen kampanye testing') }}</li>
@@ -561,7 +562,7 @@
 
         <h2>6. {{ __('Pembayaran & Reward') }}</h2>
         <p>
-          {{ __('Pembayaran diproses melalui gateway pembayaran pihak ketiga. Reward tester akan dicairkan sesuai ketentuan yang berlaku. PlaytoTest tidak bertanggung jawab atas penundaan yang disebabkan oleh pihak penyedia pembayaran.') }}
+          {{ __('Pembayaran diproses melalui gateway pembayaran pihak ketiga. Reward tester akan dicairkan sesuai ketentuan yang berlaku. Testoplay tidak bertanggung jawab atas penundaan yang disebabkan oleh pihak penyedia pembayaran.') }}
         </p>
 
         <h2>7. {{ __('Penghentian Akun') }}</h2>
@@ -571,7 +572,7 @@
 
         <h2>8. {{ __('Batasan Tanggung Jawab') }}</h2>
         <p>
-          {{ __('PlaytoTest tidak bertanggung jawab atas kerusakan tidak langsung, insidental, atau kehilangan keuntungan yang timbul dari penggunaan platform. Tanggung jawab kami dibatasi pada jumlah yang Anda bayarkan dalam 12 bulan terakhir.') }}
+          {{ __('Testoplay tidak bertanggung jawab atas kerusakan tidak langsung, insidental, atau kehilangan keuntungan yang timbul dari penggunaan platform. Tanggung jawab kami dibatasi pada jumlah yang Anda bayarkan dalam 12 bulan terakhir.') }}
         </p>
 
         <h2>9. {{ __('Hukum yang Berlaku') }}</h2>
@@ -581,20 +582,25 @@
 
         <h2>10. {{ __('Kontak') }}</h2>
         <p>{{ __('Pertanyaan terkait syarat dan ketentuan dapat dikirimkan ke:') }} <a
-            href="mailto:legal@playtotest.com">legal@playtotest.com</a></p>
+            href="mailto:legal@testoplay.com">legal@testoplay.com</a></p>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-500 text-center py-6 px-4 text-xs mt-4">
-    <p>© 2026 <span class="text-slate-300 font-semibold">PlaytoTest</span>.
-      {{ __('Hak cipta dilindungi undang-undang.') }}</p>
+  <footer
+    class="bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 text-center py-6 px-4 text-xs mt-4 transition-colors duration-200">
+    <p>© 2026 <span class="text-slate-700 dark:text-slate-300 font-semibold">Testoplay</span>.
+      {{ __('Hak cipta dilindungi undang-undang.') }}
+    </p>
     <div class="flex flex-wrap justify-center gap-4 mt-2">
-      <a href="{{ route('kebijakan-privasi') }}" class="hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
-      <a href="{{ route('syarat-ketentuan') }}" class="hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
-      <a href="{{ route('faq') }}" class="hover:text-white transition">FAQ</a>
-      <a href="{{ route('hubungi-kami') }}" class="hover:text-white transition">{{ __('Hubungi Kami') }}</a>
+      <a href="{{ route('kebijakan-privasi') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Kebijakan Privasi') }}</a>
+      <a href="{{ route('syarat-ketentuan') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Syarat & Ketentuan') }}</a>
+      <a href="{{ route('faq') }}" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
+      <a href="{{ route('hubungi-kami') }}"
+        class="hover:text-brand-600 dark:hover:text-white transition">{{ __('Hubungi Kami') }}</a>
     </div>
   </footer>
 

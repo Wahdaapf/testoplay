@@ -1,5 +1,5 @@
 {{--
-Misi Detail — PlaytoTest
+Misi Detail — Testoplay
 Panel : Tester (/tester)
 Page : MisiDetail.php
 Fonts : Plus Jakarta Sans (heading), JetBrains Mono (angka), Inter (body)

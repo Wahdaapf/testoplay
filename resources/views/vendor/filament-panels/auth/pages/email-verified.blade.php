@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Verified — PlaytoTest</title>
-    <link rel="icon" href="{{ asset('logoheader.png') }}" type="image/png" />
+    <title>Email Verified — Testoplay</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
 
     <style>
         *,
@@ -513,9 +516,12 @@
 <body>
 
     {{-- Language Switcher (Fixed top right) --}}
-    <div style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 50; display: flex; gap: 0.375rem; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); padding: 0.25rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
-        <a href="{{ route('language.switch', 'en') }}" style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'en' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'en' ? '#4F46E5' : 'transparent' }};">EN</a>
-        <a href="{{ route('language.switch', 'id') }}" style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'id' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'id' ? '#4F46E5' : 'transparent' }};">ID</a>
+    <div
+        style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 50; display: flex; gap: 0.375rem; background-color: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); padding: 0.25rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+        <a href="{{ route('language.switch', 'en') }}"
+            style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'en' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'en' ? '#4F46E5' : 'transparent' }};">EN</a>
+        <a href="{{ route('language.switch', 'id') }}"
+            style="text-decoration: none; width: 2rem; height: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem; font-size: 0.625rem; font-weight: 900; transition: all 0.2s; color: {{ App::getLocale() == 'id' ? '#ffffff' : '#94a3b8' }}; background-color: {{ App::getLocale() == 'id' ? '#4F46E5' : 'transparent' }};">ID</a>
     </div>
 
     <x-auth-mobile-bg />
@@ -528,13 +534,15 @@
 
         <!-- Brand -->
         <div class="brand">
-            <img src="{{ asset('logo.png') }}" alt="PlaytoTest" style="height: 2.5rem; width: auto; object-fit: contain;" />
+            <img src="{{ asset('logo.png') }}" alt="Testoplay"
+                style="height: 2.5rem; width: auto; object-fit: contain;" />
         </div>
 
         <!-- Success badge -->
         <div class="success-badge-wrap">
             <div class="success-badge">
-                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1,'wght' 700;">verified</span>
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings:'FILL' 1,'wght' 700;">verified</span>
                 <div class="success-tick">
                     <span class="material-symbols-outlined">check</span>
                 </div>
@@ -548,7 +556,7 @@
         </div>
         <h1>{{ __('Email Diverifikasi!') }}</h1>
         <p class="subtitle">
-            {!! __('Akun PlaytoTest Anda sekarang sepenuhnya aktif.<br>Anda siap untuk mulai menguji aplikasi dan mendapatkan hadiah!') !!}
+            {!! __('Akun Testoplay Anda sekarang sepenuhnya aktif.<br>Anda siap untuk mulai menguji aplikasi dan mendapatkan hadiah!') !!}
         </p>
 
         <!-- Perks -->
@@ -600,7 +608,7 @@
 
     <!-- Footer (Sekarang dijamin persis di tengah bawah) -->
     <div class="footer">
-        <p>{!! __('&copy; :year PlaytoTest. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}</p>
+        <p>{!! __('&copy; :year Testoplay. Hak cipta dilindungi undang-undang.', ['year' => date('Y')]) !!}</p>
         <div class="footer-links">
             <a href="{{ config('app.url') }}">{{ __('Beranda') }}</a>
             <a href="{{ config('app.url') }}/privacy">{{ __('Privasi') }}</a>
@@ -642,7 +650,7 @@
         if (dashBtn) dashBtn.setAttribute('href', panelUrl);
 
         if (dashBtn) {
-            dashBtn.addEventListener('click', function(e) {
+            dashBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 window.location.replace(panelUrl);
             });
@@ -650,7 +658,7 @@
 
         let seconds = 10;
 
-        const timer = setInterval(function() {
+        const timer = setInterval(function () {
             seconds -= 1;
             if (countEl) countEl.textContent = Math.max(0, seconds);
             if (seconds <= 0) {

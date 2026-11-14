@@ -13,7 +13,7 @@ class ListMisis extends Page
 
     protected string $view = 'filament.developer.resources.misis.list-misis';
 
-    public function getHeading(): string | \Illuminate\Contracts\Support\Htmlable
+    public function getHeading(): string|\Illuminate\Contracts\Support\Htmlable
     {
         return '';
     }
@@ -36,7 +36,8 @@ class ListMisis extends Page
         }
 
         $record = Misi::find($id);
-        if (!$record || $record->id_user !== Auth::id()) return;
+        if (!$record || $record->id_user !== Auth::id())
+            return;
 
         // 1. Jika paket trusted badge = true, ubah semua tester pending/reviewing menjadi accepted
         if ($record->paket && $record->paket->trusted_badge) {
@@ -60,7 +61,7 @@ class ListMisis extends Page
                     'id_misi' => $record->id,
                     'id_user' => $tester->id_user,
                     'hari_ke' => $i,
-                    'status'  => 'notdone',
+                    'status' => 'notdone',
                     'created_at' => $now->copy()->addDays($i - 1),
                     'updated_at' => $now->copy()->addDays($i - 1),
                 ];
@@ -87,7 +88,7 @@ class ListMisis extends Page
             if ($tester->user && $tester->user->email) {
                 try {
                     \Illuminate\Support\Facades\Mail::to($tester->user->email)->send(new \App\Mail\ContactMail(
-                        'Pengujian Aplikasi Dimulai — PlaytoTest',
+                        'Pengujian Aplikasi Dimulai — Testoplay',
                         'Misi Pengujian Dimulai!',
                         "Halo {$tester->user->name},\n\nMisi pengujian untuk aplikasi \"{$record->nama_aplikasi}\" telah resmi dimulai oleh developer.\nSilakan mulai mengunduh aplikasi dan selesaikan tugas harian Anda selama 14 hari ke depan.",
                         'Lihat Misi Saya',
@@ -104,7 +105,7 @@ class ListMisis extends Page
             ->body(__('Status misi telah diubah menjadi running dan sub-misi tester telah dibuat.'))
             ->success()
             ->send();
-            
+
         $this->link_aplikasi = null;
         $this->dispatch('close-modal-mulai');
     }
@@ -112,7 +113,8 @@ class ListMisis extends Page
     public function hapusMisi($id)
     {
         $record = Misi::find($id);
-        if (!$record || $record->id_user !== Auth::id()) return;
+        if (!$record || $record->id_user !== Auth::id())
+            return;
 
         $record->delete();
 
@@ -140,48 +142,48 @@ class ListMisis extends Page
         ];
 
         $statusMap = [
-            'pending'   => __('Tertunda'),
-            'open'      => __('Terbuka'),
-            'running'   => __('Berjalan'),
-            'closed'    => __('Ditutup'),
+            'pending' => __('Tertunda'),
+            'open' => __('Terbuka'),
+            'running' => __('Berjalan'),
+            'closed' => __('Ditutup'),
             'completed' => __('Selesai'),
-            'rejected'  => __('Ditolak'),
-            'active'    => __('Aktif'),
+            'rejected' => __('Ditolak'),
+            'active' => __('Aktif'),
         ];
 
         return [
-            'statTotal'   => $misis->count(),
+            'statTotal' => $misis->count(),
             'statRunning' => $misis->where('status', 'running')->count(),
             'statTesters' => \App\Models\MisiAnggota::whereIn('id_misi', $misis->pluck('id'))->count(),
-            'statPoints'  => $misis->sum('point'),
-            
-            'kampanyeList' => $misis->map(function($misi, $idx) use ($colors, $statusMap) {
+            'statPoints' => $misis->sum('point'),
+
+            'kampanyeList' => $misis->map(function ($misi, $idx) use ($colors, $statusMap) {
                 $rawStatus = trim($misi->status); // e.g. 'active', 'pending', 'closed', 'running'
                 $grad = $colors[$idx % count($colors)];
                 $statusUI = $statusMap[strtolower($rawStatus)] ?? ucfirst($rawStatus);
-                
+
                 // Timeline logic (14 days)
                 $createdAt = $misi->created_at;
                 $hariKe = $createdAt ? (int) $createdAt->diffInDays(now()) : 0;
                 $hariKe = min(max($hariKe, 0), 14);
 
                 return [
-                    'id'        => $misi->id,
-                    'nama'      => $misi->nama_aplikasi,
+                    'id' => $misi->id,
+                    'nama' => $misi->nama_aplikasi,
                     'developer' => Auth::user()->name ?? 'Unknown',
-                    'status'    => $statusUI,
-                    'raw_status'=> $rawStatus,
-                    'tester'    => $misi->misi_anggotas_count,
+                    'status' => $statusUI,
+                    'raw_status' => $rawStatus,
+                    'tester' => $misi->misi_anggotas_count,
                     'maxTester' => $misi->kapasitas ?? config('missions.max_capacity', 20),
-                    'hariKe'    => ($rawStatus === 'completed') ? 14 : (($rawStatus === 'pending' || $rawStatus === 'closed') ? 0 : $hariKe),
-                    'maxHari'   => 14,
-                    'mulai'     => $misi->created_at ? $misi->created_at->format('d M Y') : '-',
-                    'selesai'   => $misi->created_at ? $misi->created_at->addDays(14)->format('d M Y') : '-',
-                    'paket'     => $misi->paket->nama_paket ?? 'Starter',
-                    'poin'      => $misi->point ?? 0,
-                    'logo'      => $misi->logo,
+                    'hariKe' => ($rawStatus === 'completed') ? 14 : (($rawStatus === 'pending' || $rawStatus === 'closed') ? 0 : $hariKe),
+                    'maxHari' => 14,
+                    'mulai' => $misi->created_at ? $misi->created_at->format('d M Y') : '-',
+                    'selesai' => $misi->created_at ? $misi->created_at->addDays(14)->format('d M Y') : '-',
+                    'paket' => $misi->paket->nama_paket ?? 'Starter',
+                    'poin' => $misi->point ?? 0,
+                    'logo' => $misi->logo,
                     'ikonHuruf' => strtoupper(substr($misi->nama_aplikasi, 0, 1)),
-                    'ikonGrad'  => "linear-gradient(135deg, {$grad[0]} 0%, {$grad[1]} 100%)",
+                    'ikonGrad' => "linear-gradient(135deg, {$grad[0]} 0%, {$grad[1]} 100%)",
                 ];
             })->toArray(),
         ];
