@@ -654,7 +654,6 @@
                   style="background:rgba(255,255,255,0.12);color:#dbeafe;border:1px solid rgba(255,255,255,.15);">
                   <span class="w-1.5 h-1.5 rounded-full inline-block prof-status-dot"
                     style="background:#34d399;"></span>
-                  {{ __('Bergabung') }} {{ Auth::user()->created_at->format('M Y') }}
                   {{ __('Bergabung') }} {{ Auth::user()->created_at?->format('M Y') ?? '-' }}
                 </span>
                 <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
