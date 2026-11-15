@@ -8,11 +8,12 @@ class GeminiService
 {
     private string $apiKey;
     private string $endpoint = 'https://api.groq.com/openai/v1/chat/completions';
-    private string $model    = 'llama-3.1-8b-instant';
+    private string $model;
 
     public function __construct()
     {
         $this->apiKey = config('services.groq.key');
+        $this->model  = config('services.groq.model', env('GROQ_MODEL', 'llama-3.3-70b-versatile'));
     }
 
     public function analyzeTesterFeedback(string $misiNama, array $catatanList): string
@@ -56,22 +57,38 @@ Nilai severity: "critical" (crash/data loss), "major" (fitur tidak berfungsi), "
 Skor 1-10: 1-3 tidak layak, 4-6 perlu perbaikan, 7-8 cukup layak, 9-10 siap launch.
 PROMPT;
 
-        $response = Http::timeout(30)
-            ->withHeaders([
-                'Authorization' => 'Bearer ' . $this->apiKey,
-                'Content-Type'  => 'application/json',
-            ])
-            ->post($this->endpoint, [
-                'model'       => $this->model,
-                'messages'    => [
-                    ['role' => 'user', 'content' => $prompt],
-                ],
-                'temperature' => 0.3,
-                'max_tokens'  => 4096,
-            ]);
+        $modelsToTry = array_values(array_unique([
+            $this->model,
+            'llama-3.3-70b-versatile',
+        ]));
 
-        if ($response->failed()) {
-            throw new \RuntimeException('Groq API error: ' . $response->body());
+        $lastError = null;
+        $response = null;
+
+        foreach ($modelsToTry as $currentModel) {
+            $response = Http::timeout(30)
+                ->withHeaders([
+                    'Authorization' => 'Bearer ' . $this->apiKey,
+                    'Content-Type'  => 'application/json',
+                ])
+                ->post($this->endpoint, [
+                    'model'       => $currentModel,
+                    'messages'    => [
+                        ['role' => 'user', 'content' => $prompt],
+                    ],
+                    'temperature' => 0.3,
+                    'max_tokens'  => 4096,
+                ]);
+
+            if ($response->successful()) {
+                break;
+            }
+
+            $lastError = 'Groq API error (' . $currentModel . '): ' . $response->body();
+        }
+
+        if (!$response || $response->failed()) {
+            throw new \RuntimeException($lastError ?? 'Groq API request failed.');
         }
 
         $text = data_get($response->json(), 'choices.0.message.content', '');
