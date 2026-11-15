@@ -494,7 +494,7 @@
 
         <!-- Sub-headline -->
         <p class="text-lg text-blue-100 leading-relaxed max-w-lg">
-          {{ __('Testoplay adalah platform kolaborasi antara') }} <strong class="text-white">Developers</strong> {{ __('yang membutuhkan tester aktif dan') }} <strong class="text-white">Testers</strong> {{ __('yang ingin berkontribusi sambil belajar — dibangun di atas konsep') }} <em>{{ __('Project Based Learning') }}</em>.
+          {{ __('Testoplay adalah platform kolaborasi antara Developer yang membutuhkan tester aktif dan Tester yang ingin berkontribusi sambil belajar langsung lewat pengujian aplikasi nyata.') }}
         </p>
 
         <!-- Dual CTA -->

@@ -996,7 +996,7 @@
                         <p class="login-card-subtitle">{{ __('Silakan masukkan detail Anda untuk masuk.') }}</p>
                     </div>
 
-                    {{-- Google Sign-In Button --}}
+                    {{-- Google Sign-In Button (Commented)
                     <div style="margin-top: 1.75rem;">
                         <a href="{{ route('auth.google', ['panel' => filament()->getCurrentPanel()->getId()]) }}"
                             class="login-google-btn" title="Sign in with Google">
@@ -1019,12 +1019,12 @@
                         </a>
                     </div>
 
-                    {{-- Divider --}}
                     <div class="login-divider">
                         <div class="login-divider-line"></div>
                         <span class="login-divider-text">{{ __('atau masuk dengan email') }}</span>
                         <div class="login-divider-line"></div>
                     </div>
+                    --}}
 
                     {{-- Filament form (email, password, remember, submit) --}}
                     <div class="login-form-wrapper">
