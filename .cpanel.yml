@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/teplay/public_html/
+    - export DEPLOYPATH=/home/teplay/testoplay/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/rsync -av --exclude='.git' --exclude='.env' --exclude='storage/' ./ $DEPLOYPATH
