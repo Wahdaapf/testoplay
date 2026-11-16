@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 09, 2026 at 07:24 AM
--- Server version: 10.11.17-MariaDB
+-- Generation Time: Nov 16, 2026 at 10:37 AM
+-- Server version: 10.11.18-MariaDB
 -- PHP Version: 8.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `playtest_playtest_id`
+-- Database: `teplay_testoplay`
 --
 
 -- --------------------------------------------------------
@@ -47,7 +47,8 @@ INSERT INTO `ai_reports` (`id`, `id_misi`, `hari_ke`, `result`, `feedback_count`
 (3, 41, 2, '{\n  \"ringkasan\": \"Aplikasi EduKid memiliki beberapa kelebihan dan kekurangan. Fitur cerita interaktif berjalan lancar, menu navigasi mudah dipahami, tetapi ada beberapa bug yang perlu diperbaiki.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi memiliki beberapa kekurangan yang perlu diperbaiki, tetapi masih cukup layak untuk digunakan.\",\n  \"bugs\": [\n    {\"judul\": \"Tombol Next tidak merespons saat ditekan pertama kali\", \"jumlah\": 1, \"severity\": \"major\"},\n    {\"judul\": \"Bug lainnya\", \"jumlah\": 0, \"severity\": \"minor\"}\n  ],\n  \"ux_issues\": [\n    {\"judul\": \"Menu navigasi bawah mudah dipahami dan dioperasikan oleh anak-anak\", \"detail\": \"Tidak ada masalah UX yang signifikan\"}\n  ],\n  \"positif\": [\n    \"Fitur cerita interaktif berjalan lancar dan responsif.\",\n    \"Animasi karakter lucu dan menarik.\"\n  ],\n  \"rekomendasi\": [\n    {\"prioritas\": 1, \"judul\": \"Perbaiki tombol Next agar merespons saat ditekan pertama kali\", \"detail\": \"Perbaiki bug tombol Next agar tidak memerlukan ditekan dua kali.\"},\n    {\"prioritas\": 2, \"judul\": \"Perbaiki bug lainnya\", \"detail\": \"Perbaiki bug lainnya yang tidak teridentifikasi.\"},\n    {\"prioritas\": 3, \"judul\": \"Perbaiki responsifitas aplikasi\", \"detail\": \"Perbaiki responsifitas aplikasi agar lebih cepat dan stabil.\"}\n  ]\n}', 3, '2026-06-09 09:07:23', '2026-06-09 09:07:23'),
 (4, 41, 3, '{\n  \"ringkasan\": \"Aplikasi EduKid memiliki beberapa masalah, tetapi fitur kuis dan suara feedbacknya menarik. Namun, font huruf terlalu kecil dan terdapat bug yang menyebabkan aplikasi crash.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi memiliki beberapa masalah, tetapi masih dapat digunakan dengan beberapa keterbatasan.\",\n  \"bugs\": [\n    {\"judul\": \"Kuis level 3 crash ketika soal nomor 7 dijawab\", \"jumlah\": 1, \"severity\": \"critical\"},\n    {\"judul\": \"Font huruf terlalu kecil\", \"jumlah\": 1, \"severity\": \"minor\"}\n  ],\n  \"ux_issues\": [\n    {\"judul\": \"Font huruf terlalu kecil untuk anak usia 4-5 tahun, cukup susah dibaca mandiri.\", \"detail\": \"Font huruf yang digunakan terlalu kecil dan tidak dapat dibaca dengan jelas oleh anak-anak usia 4-5 tahun.\"}\n  ],\n  \"positif\": [\n    \"Fitur kuis berjalan baik.\",\n    \"Suara feedback benar/salah menyenangkan untuk anak.\"\n  ],\n  \"rekomendasi\": [\n    {\"prioritas\": 1, \"judul\": \"Perbaiki bug kuis level 3 yang crash ketika soal nomor 7 dijawab\", \"detail\": \"Perbaiki bug yang menyebabkan aplikasi crash ketika anak menjawab soal nomor 7 di kuis level 3.\"},\n    {\"prioritas\": 2, \"judul\": \"Perbesar font huruf untuk anak usia 4-5 tahun\", \"detail\": \"Perbesar font huruf yang digunakan agar dapat dibaca dengan jelas oleh anak-anak usia 4-5 tahun.\"},\n    {\"prioritas\": 3, \"judul\": \"Perbaiki suara feedback untuk lebih menarik\", \"detail\": \"Perbaiki suara feedback untuk lebih menarik dan menyenangkan bagi anak-anak.\"}\n  ]\n}', 3, '2026-06-09 10:14:30', '2026-06-09 10:14:30'),
 (5, 41, 4, '{\n  \"ringkasan\": \"Aplikasi EduKid memiliki beberapa kelebihan dan kekurangan, tetapi masih perlu perbaikan.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi memiliki beberapa bug dan kekurangan UX, tetapi masih dapat digunakan dengan baik.\",\n  \"bugs\": [\n    {\"judul\": \"Tombol kembali di halaman kuis tidak berfungsi\", \"jumlah\": 1, \"severity\": \"major\"},\n    {\"judul\": \"Aplikasi tidak dapat menangani crash/data loss\", \"jumlah\": 0, \"severity\": \"critical\"},\n    {\"judul\": \"Lain-lain\", \"jumlah\": 0, \"severity\": \"minor\"}\n  ],\n  \"ux_issues\": [\n    {\"judul\": \"Tombol kembali di halaman kuis tidak berfungsi\", \"detail\": \"Pengguna harus menggunakan tombol back dari HP untuk kembali ke halaman sebelumnya.\"}\n  ],\n  \"positif\": [\n    \"Fitur progress anak dapat dilihat oleh orang tua\",\n    \"Gambar ilustrasi cerita sangat bagus, detail, dan menarik perhatian anak\"\n  ],\n  \"rekomendasi\": [\n    {\"prioritas\": 1, \"judul\": \"Perbaiki tombol kembali di halaman kuis\", \"detail\": \"Tombol kembali harus berfungsi dengan baik untuk memudahkan pengguna.\"},\n    {\"prioritas\": 2, \"judul\": \"Perbaiki aplikasi untuk menangani crash/data loss\", \"detail\": \"Aplikasi harus dapat menangani crash/data loss untuk memastikan keamanan data pengguna.\"},\n    {\"prioritas\": 3, \"judul\": \"Perbaiki UX lainnya\", \"detail\": \"Aplikasi harus dapat memudahkan pengguna dengan UX yang baik.\"}\n  ]\n}', 3, '2026-06-09 10:15:10', '2026-06-09 10:15:10'),
-(6, 41, 5, '{\n  \"ringkasan\": \"Aplikasi EduKid - Belajar Seru memiliki kualitas yang cukup baik, namun masih perlu perbaikan pada beberapa aspek.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi memiliki beberapa kelemahan, tetapi masih dapat digunakan dengan baik.\",\n  \"bugs\": [\n    {\"judul\": \"Iklan muncul di tengah-tengah sesi belajar\", \"jumlah\": 1, \"severity\": \"minor\"},\n    {\"judul\": \"Tidak ada crash\", \"jumlah\": 0, \"severity\": \"minor\"}\n  ],\n  \"ux_issues\": [\n    {\"judul\": \"Iklan muncul di tengah-tengah sesi belajar\", \"detail\": \"Sangat mengganggu pengalaman anak\"}\n  ],\n  \"positif\": [\n    \"Fitur reward bintang efektif memotivasi anak untuk terus belajar setiap hari\"\n  ],\n  \"rekomendasi\": [\n    {\"prioritas\": 1, \"judul\": \"Perbaiki fitur iklan untuk tidak mengganggu pengalaman anak\", \"detail\": \"Pastikan iklan hanya muncul pada waktu yang tepat dan tidak mengganggu proses belajar\"},\n    {\"prioritas\": 2, \"judul\": \"Perbaiki UX untuk mengurangi gangguan iklan\", \"detail\": \"Pastikan UX aplikasi dapat mengurangi gangguan iklan dan meningkatkan pengalaman anak\"},\n    {\"prioritas\": 3, \"judul\": \"Tambahan fitur untuk mengurangi gangguan iklan\", \"detail\": \"Pastikan fitur tambahan dapat mengurangi gangguan iklan dan meningkatkan pengalaman anak\"}\n  ]\n}', 3, '2026-06-09 13:23:40', '2026-06-09 13:23:40');
+(6, 41, 5, '{\n  \"ringkasan\": \"Aplikasi EduKid - Belajar Seru memiliki kualitas yang cukup baik, namun masih perlu perbaikan pada beberapa aspek.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi memiliki beberapa kelemahan, tetapi masih dapat digunakan dengan baik.\",\n  \"bugs\": [\n    {\"judul\": \"Iklan muncul di tengah-tengah sesi belajar\", \"jumlah\": 1, \"severity\": \"minor\"},\n    {\"judul\": \"Tidak ada crash\", \"jumlah\": 0, \"severity\": \"minor\"}\n  ],\n  \"ux_issues\": [\n    {\"judul\": \"Iklan muncul di tengah-tengah sesi belajar\", \"detail\": \"Sangat mengganggu pengalaman anak\"}\n  ],\n  \"positif\": [\n    \"Fitur reward bintang efektif memotivasi anak untuk terus belajar setiap hari\"\n  ],\n  \"rekomendasi\": [\n    {\"prioritas\": 1, \"judul\": \"Perbaiki fitur iklan untuk tidak mengganggu pengalaman anak\", \"detail\": \"Pastikan iklan hanya muncul pada waktu yang tepat dan tidak mengganggu proses belajar\"},\n    {\"prioritas\": 2, \"judul\": \"Perbaiki UX untuk mengurangi gangguan iklan\", \"detail\": \"Pastikan UX aplikasi dapat mengurangi gangguan iklan dan meningkatkan pengalaman anak\"},\n    {\"prioritas\": 3, \"judul\": \"Tambahan fitur untuk mengurangi gangguan iklan\", \"detail\": \"Pastikan fitur tambahan dapat mengurangi gangguan iklan dan meningkatkan pengalaman anak\"}\n  ]\n}', 3, '2026-06-09 13:23:40', '2026-06-09 13:23:40'),
+(7, 49, NULL, '{\n  \"ringkasan\": \"Aplikasi Paket Premium memiliki fungsi utama yang tersedia, namun terdapat bug pada login dengan Google dan masalah responsivitas pada halaman login yang memengaruhi pengalaman pengguna.\",\n  \"skor\": 7,\n  \"skor_label\": \"Cukup Layak\",\n  \"skor_deskripsi\": \"Aplikasi dapat digunakan tetapi masih membutuhkan perbaikan pada proses login.\",\n  \"bugs\": [\n    {\n      \"judul\": \"Google login failure\",\n      \"jumlah\": 1,\n      \"severity\": \"major\"\n    }\n  ],\n  \"ux_issues\": [\n    {\n      \"judul\": \"Login page not responsive\",\n      \"detail\": \"Halaman login tidak menyesuaikan dengan ukuran layar perangkat, menyebabkan elemen terpotong atau tidak dapat diakses.\"\n    }\n  ],\n  \"positif\": [\n    \"Desain visual yang menarik\",\n    \"Fitur paket premium tersedia dan berfungsi dengan baik\"\n  ],\n  \"rekomendasi\": [\n    {\n      \"prioritas\": 1,\n      \"judul\": \"Perbaiki integrasi login Google\",\n      \"detail\": \"Debug dan perbaiki alur otentikasi Google agar tidak terjadi kegagalan login.\"\n    },\n    {\n      \"prioritas\": 2,\n      \"judul\": \"Optimasi responsivitas halaman login\",\n      \"detail\": \"Gunakan layout fleksibel dan ukuran elemen yang adaptif untuk semua ukuran layar.\"\n    },\n    {\n      \"prioritas\": 3,\n      \"judul\": \"Sediakan metode login alternatif\",\n      \"detail\": \"Tambahkan opsi login dengan email/password sebagai fallback bila login Google gagal.\"\n    }\n  ]\n}', 2, '2026-11-16 06:59:48', '2026-11-16 06:59:48');
 
 -- --------------------------------------------------------
 
@@ -66,28 +67,12 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('playtestid-cache-1574bddb75c78a6fd2251d61e2993b5146201319', 'i:1;', 1780969222),
-('playtestid-cache-1574bddb75c78a6fd2251d61e2993b5146201319:timer', 'i:1780969222;', 1780969222),
-('playtestid-cache-91032ad7bbcb6cf72875e8e8207dcfba80173f7c', 'i:1;', 1780888037),
-('playtestid-cache-91032ad7bbcb6cf72875e8e8207dcfba80173f7c:timer', 'i:1780888037;', 1780888037),
-('playtestid-cache-9e6a55b6b4563e652a23be9d623ca5055c356940', 'i:1;', 1780971383),
-('playtestid-cache-9e6a55b6b4563e652a23be9d623ca5055c356940:timer', 'i:1780971383;', 1780971383),
-('playtestid-cache-bed88025c4e3db8ef1f4146770c5df343e473b2d', 'i:1;', 1780973494),
-('playtestid-cache-bed88025c4e3db8ef1f4146770c5df343e473b2d:timer', 'i:1780973494;', 1780973494),
-('playtestid-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:2;', 1780883149),
-('playtestid-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1780883149;', 1780883149),
-('playtestid-cache-f1abd670358e036c31296e66b3b66c382ac00812', 'i:1;', 1780884666),
-('playtestid-cache-f1abd670358e036c31296e66b3b66c382ac00812:timer', 'i:1780884666;', 1780884666),
-('playtestid-cache-f6e1126cedebf23e1463aee73f9df08783640400', 'i:1;', 1780973340),
-('playtestid-cache-f6e1126cedebf23e1463aee73f9df08783640400:timer', 'i:1780973340;', 1780973340),
-('playtestid-cache-livewire-rate-limiter:5298b3f7899a98229e34729c1676cbfb7eea7aea', 'i:1;', 1780972188),
-('playtestid-cache-livewire-rate-limiter:5298b3f7899a98229e34729c1676cbfb7eea7aea:timer', 'i:1780972188;', 1780972188),
-('playtestid-cache-livewire-rate-limiter:6a84ff038cd5b7fcda2a19aacd7c6557ba7ebb81', 'i:1;', 1780891327),
-('playtestid-cache-livewire-rate-limiter:6a84ff038cd5b7fcda2a19aacd7c6557ba7ebb81:timer', 'i:1780891327;', 1780891327),
-('playtestid-cache-livewire-rate-limiter:702fd565aec4e1699a14e4f5dfca010f687b1e01', 'i:1;', 1780986193),
-('playtestid-cache-livewire-rate-limiter:702fd565aec4e1699a14e4f5dfca010f687b1e01:timer', 'i:1780986193;', 1780986193),
-('playtestid-cache-livewire-rate-limiter:7c1ee645ce9c55ebdfdcd2c9230452c2dca4b2dd', 'i:1;', 1780973664),
-('playtestid-cache-livewire-rate-limiter:7c1ee645ce9c55ebdfdcd2c9230452c2dca4b2dd:timer', 'i:1780973664;', 1780973664);
+('testoplay-cache-0a57cb53ba59c46fc4b692527a38a87c78d84028', 'i:1;', 1794814217),
+('testoplay-cache-0a57cb53ba59c46fc4b692527a38a87c78d84028:timer', 'i:1794814217;', 1794814217),
+('testoplay-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:1;', 1794817871),
+('testoplay-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1794817871;', 1794817871),
+('testoplay-cache-livewire-rate-limiter:a0a3ef72ccf10fd69f238596209389505be39b0a', 'i:1;', 1794808587),
+('testoplay-cache-livewire-rate-limiter:a0a3ef72ccf10fd69f238596209389505be39b0a:timer', 'i:1794808587;', 1794808587);
 
 -- --------------------------------------------------------
 
@@ -220,7 +205,14 @@ INSERT INTO `misi` (`id`, `id_user`, `id_paket`, `nama_aplikasi`, `logo`, `link_
 (40, 16, 5, 'Fall Guys', 'logos/01KTN0K5Q2QFBV6CZQ9NGM6F7S.jpg', '-', '<p>Okelah</p>', 'open', 20, 1, '2026-06-09 08:40:15', '2026-06-09 09:08:31'),
 (41, 18, 5, 'EduKid - Belajar Seru', NULL, 'https://play.google.com/store/apps/details?id=com.edukid.app', 'Install aplikasi, buka semua menu, coba fitur kuis dan cerita interaktif, screenshot halaman utama setelah digunakan minimal 5 menit.', 'running', 15000, 3, '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
 (42, 18, 5, 'DAme dane', 'logos/01KTN2MZNA2K57ZNGEQ5WZTXCD.jpg', '-', '<p>hjsdiuanosdajsdn</p><p></p>', 'open', 20, 0, '2026-06-09 09:16:12', '2026-06-09 09:17:07'),
-(43, 25, 5, 'Misi Prem', 'logos/01KTN4GAE3KW5WWXRT07NQQACT.jpg', '-', '<p>Ini adalah instruksi</p>', 'open', 200, 1, '2026-06-09 09:48:36', '2026-06-09 09:52:11');
+(48, 2, 4, 'Aplikasi Paket Biasa', 'logos/01M7FGKM7PVEYA4VVEM80XS10K.jpg', 'https://testoplay.my.id/developer/misis/48/kelola-tester', '<p>Ini adalah langkah langkah</p>', 'running', 150, 2, '2026-11-15 18:48:44', '2026-11-16 07:44:17'),
+(49, 2, 5, 'Aplikasi Paket Premium', 'logos/01M7FH1J8ZQGM33THPST76M4X1.jpg', 'https://testoplay.my.id/developer/misis/49/kelola-tester', '<p>Ini adalah instruksi</p>', 'running', 200, 2, '2026-11-15 18:56:21', '2026-11-15 19:00:48'),
+(50, 2, 5, 'Aplikasi Testing', 'logos/01M7HFJD18WNQF4ECXKXT2AQFS.png', '-', '<p>Ini adalah Instruksi</p>', 'open', 200, 0, '2026-11-16 13:09:05', '2026-11-16 13:09:43'),
+(51, 2, 5, 'ini test', 'logos/01M7HM7PFR2TJDWNAC4120EFA9.png', '-', '<p>hahahahha</p>', 'open', 200, 0, '2026-11-16 14:30:37', '2026-11-16 14:37:21'),
+(52, 2, 5, 'test', 'logos/01M7HMV4FA1S36TKB7C5M6HVXF.png', '-', '<p>ahahaha</p>', 'open', 200, 0, '2026-11-16 14:41:14', '2026-11-16 14:56:28'),
+(53, 2, 4, 'testtt', 'logos/01M7HP63ASHYNKGFM6J9QDZ0Z1.png', '-', '<p>sssss</p>', 'open', 150, 0, '2026-11-16 15:04:41', '2026-11-16 15:19:57'),
+(54, 2, 4, 'yesss', 'logos/01M7HQAKQM8K7MCSDQYVVZQ5R0.png', '-', '<p>ddddd</p>', 'open', 150, 0, '2026-11-16 15:24:38', '2026-11-16 15:28:17'),
+(55, 2, 5, 'cvcvcvc', 'logos/01M7HQN7Y120FXFHGKQCCRPZF1.png', '-', '<p>dddd</p>', 'pending', 200, 0, '2026-11-16 15:30:26', '2026-11-16 15:30:26');
 
 -- --------------------------------------------------------
 
@@ -246,7 +238,11 @@ INSERT INTO `misi_anggota` (`id`, `id_misi`, `id_user`, `status`, `created_at`, 
 (23, 41, 23, 'selesai', '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
 (24, 41, 24, 'selesai', '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
 (25, 40, 16, 'pending', '2026-06-09 09:08:31', '2026-06-09 09:08:31'),
-(26, 43, 4, 'pending', '2026-06-09 09:52:11', '2026-06-09 09:52:11');
+(28, 48, 28, 'progress', '2026-11-15 18:52:40', '2026-11-15 18:53:09'),
+(29, 48, 29, 'progress', '2026-11-15 18:52:43', '2026-11-15 18:53:09'),
+(30, 48, 30, 'failed', '2026-11-15 18:52:46', '2026-11-16 07:44:08'),
+(31, 49, 28, 'progress', '2026-11-15 19:00:21', '2026-11-15 19:00:48'),
+(32, 49, 29, 'progress', '2026-11-15 19:00:30', '2026-11-15 19:00:48');
 
 -- --------------------------------------------------------
 
@@ -314,7 +310,77 @@ INSERT INTO `misi_sub` (`id`, `id_misi`, `id_user`, `hari_ke`, `image`, `desc`, 
 (235, 41, 24, 11, NULL, 'Daily Task Submission', 'Fitur sharing hasil belajar ke media sosial orang tua sangat bagus untuk apresiasi anak.', NULL, 'done', '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
 (236, 41, 24, 12, NULL, 'Daily Task Submission', 'Animasi transisi antar halaman smooth dan tidak patah-patah sama sekali.', NULL, 'done', '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
 (237, 41, 24, 13, NULL, 'Daily Task Submission', 'Aplikasi sudah jauh lebih baik dari awal testing. Perkembangan sangat positif.', NULL, 'done', '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
-(238, 41, 24, 14, NULL, 'Daily Task Submission', 'Secara keseluruhan aplikasi sangat bagus, tinggal perlu polish di beberapa bagian kecil.', NULL, 'done', '2026-06-09 02:02:02', '2026-06-09 09:02:34');
+(238, 41, 24, 14, NULL, 'Daily Task Submission', 'Secara keseluruhan aplikasi sangat bagus, tinggal perlu polish di beberapa bagian kecil.', NULL, 'done', '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
+(253, 48, 28, 1, 'task-screenshots/01M7FGXGDRCKA1934HPARWRHMK.jpg', 'Daily Task Submission', 'Terdapat bug di halaman login dengan google dan saya tidak bisa login', NULL, 'done', '2026-11-15 18:53:09', '2026-11-15 18:55:09'),
+(254, 48, 28, 2, NULL, NULL, NULL, NULL, 'notdone', '2026-11-16 18:53:09', '2026-11-16 18:53:09'),
+(255, 48, 28, 3, NULL, NULL, NULL, NULL, 'notdone', '2026-11-17 18:53:09', '2026-11-17 18:53:09'),
+(256, 48, 28, 4, NULL, NULL, NULL, NULL, 'notdone', '2026-11-18 18:53:09', '2026-11-18 18:53:09'),
+(257, 48, 28, 5, NULL, NULL, NULL, NULL, 'notdone', '2026-11-19 18:53:09', '2026-11-19 18:53:09'),
+(258, 48, 28, 6, NULL, NULL, NULL, NULL, 'notdone', '2026-11-20 18:53:09', '2026-11-20 18:53:09'),
+(259, 48, 28, 7, NULL, NULL, NULL, NULL, 'notdone', '2026-11-21 18:53:09', '2026-11-21 18:53:09'),
+(260, 48, 28, 8, NULL, NULL, NULL, NULL, 'notdone', '2026-11-22 18:53:09', '2026-11-22 18:53:09'),
+(261, 48, 28, 9, NULL, NULL, NULL, NULL, 'notdone', '2026-11-23 18:53:09', '2026-11-23 18:53:09'),
+(262, 48, 28, 10, NULL, NULL, NULL, NULL, 'notdone', '2026-11-24 18:53:09', '2026-11-24 18:53:09'),
+(263, 48, 28, 11, NULL, NULL, NULL, NULL, 'notdone', '2026-11-25 18:53:09', '2026-11-25 18:53:09'),
+(264, 48, 28, 12, NULL, NULL, NULL, NULL, 'notdone', '2026-11-26 18:53:09', '2026-11-26 18:53:09'),
+(265, 48, 28, 13, NULL, NULL, NULL, NULL, 'notdone', '2026-11-27 18:53:09', '2026-11-27 18:53:09'),
+(266, 48, 28, 14, NULL, NULL, NULL, NULL, 'notdone', '2026-11-28 18:53:09', '2026-11-28 18:53:09'),
+(267, 48, 29, 1, 'task-screenshots/01M7FGYVMMCDM2CZHWGT77B98W.jpg', 'Daily Task Submission', 'Halaman Login tampilannya tidak responsive di layar mobile', NULL, 'done', '2026-11-15 18:53:09', '2026-11-15 18:55:06'),
+(268, 48, 29, 2, NULL, NULL, NULL, NULL, 'notdone', '2026-11-16 18:53:09', '2026-11-16 18:53:09'),
+(269, 48, 29, 3, NULL, NULL, NULL, NULL, 'notdone', '2026-11-17 18:53:09', '2026-11-17 18:53:09'),
+(270, 48, 29, 4, NULL, NULL, NULL, NULL, 'notdone', '2026-11-18 18:53:09', '2026-11-18 18:53:09'),
+(271, 48, 29, 5, NULL, NULL, NULL, NULL, 'notdone', '2026-11-19 18:53:09', '2026-11-19 18:53:09'),
+(272, 48, 29, 6, NULL, NULL, NULL, NULL, 'notdone', '2026-11-20 18:53:09', '2026-11-20 18:53:09'),
+(273, 48, 29, 7, NULL, NULL, NULL, NULL, 'notdone', '2026-11-21 18:53:09', '2026-11-21 18:53:09'),
+(274, 48, 29, 8, NULL, NULL, NULL, NULL, 'notdone', '2026-11-22 18:53:09', '2026-11-22 18:53:09'),
+(275, 48, 29, 9, NULL, NULL, NULL, NULL, 'notdone', '2026-11-23 18:53:09', '2026-11-23 18:53:09'),
+(276, 48, 29, 10, NULL, NULL, NULL, NULL, 'notdone', '2026-11-24 18:53:09', '2026-11-24 18:53:09'),
+(277, 48, 29, 11, NULL, NULL, NULL, NULL, 'notdone', '2026-11-25 18:53:09', '2026-11-25 18:53:09'),
+(278, 48, 29, 12, NULL, NULL, NULL, NULL, 'notdone', '2026-11-26 18:53:09', '2026-11-26 18:53:09'),
+(279, 48, 29, 13, NULL, NULL, NULL, NULL, 'notdone', '2026-11-27 18:53:09', '2026-11-27 18:53:09'),
+(280, 48, 29, 14, NULL, NULL, NULL, NULL, 'notdone', '2026-11-28 18:53:09', '2026-11-28 18:53:09'),
+(281, 48, 30, 1, NULL, NULL, NULL, NULL, 'notdone', '2026-11-15 18:53:09', '2026-11-15 18:53:09'),
+(282, 48, 30, 2, NULL, NULL, NULL, NULL, 'notdone', '2026-11-16 18:53:09', '2026-11-16 18:53:09'),
+(283, 48, 30, 3, NULL, NULL, NULL, NULL, 'notdone', '2026-11-17 18:53:09', '2026-11-17 18:53:09'),
+(284, 48, 30, 4, NULL, NULL, NULL, NULL, 'notdone', '2026-11-18 18:53:09', '2026-11-18 18:53:09'),
+(285, 48, 30, 5, NULL, NULL, NULL, NULL, 'notdone', '2026-11-19 18:53:09', '2026-11-19 18:53:09'),
+(286, 48, 30, 6, NULL, NULL, NULL, NULL, 'notdone', '2026-11-20 18:53:09', '2026-11-20 18:53:09'),
+(287, 48, 30, 7, NULL, NULL, NULL, NULL, 'notdone', '2026-11-21 18:53:09', '2026-11-21 18:53:09'),
+(288, 48, 30, 8, NULL, NULL, NULL, NULL, 'notdone', '2026-11-22 18:53:09', '2026-11-22 18:53:09'),
+(289, 48, 30, 9, NULL, NULL, NULL, NULL, 'notdone', '2026-11-23 18:53:09', '2026-11-23 18:53:09'),
+(290, 48, 30, 10, NULL, NULL, NULL, NULL, 'notdone', '2026-11-24 18:53:09', '2026-11-24 18:53:09'),
+(291, 48, 30, 11, NULL, NULL, NULL, NULL, 'notdone', '2026-11-25 18:53:09', '2026-11-25 18:53:09'),
+(292, 48, 30, 12, NULL, NULL, NULL, NULL, 'notdone', '2026-11-26 18:53:09', '2026-11-26 18:53:09'),
+(293, 48, 30, 13, NULL, NULL, NULL, NULL, 'notdone', '2026-11-27 18:53:09', '2026-11-27 18:53:09'),
+(294, 48, 30, 14, NULL, NULL, NULL, NULL, 'notdone', '2026-11-28 18:53:09', '2026-11-28 18:53:09'),
+(295, 49, 28, 1, 'task-screenshots/01M7FHAWEQHZRPCMTEGP8EMQEJ.jpg', 'Daily Task Submission', 'Terdapat bug saat saya login dengan google', NULL, 'done', '2026-11-15 19:00:48', '2026-11-15 19:02:17'),
+(296, 49, 28, 2, NULL, NULL, NULL, NULL, 'notdone', '2026-11-16 19:00:48', '2026-11-16 19:00:48'),
+(297, 49, 28, 3, NULL, NULL, NULL, NULL, 'notdone', '2026-11-17 19:00:48', '2026-11-17 19:00:48'),
+(298, 49, 28, 4, NULL, NULL, NULL, NULL, 'notdone', '2026-11-18 19:00:48', '2026-11-18 19:00:48'),
+(299, 49, 28, 5, NULL, NULL, NULL, NULL, 'notdone', '2026-11-19 19:00:48', '2026-11-19 19:00:48'),
+(300, 49, 28, 6, NULL, NULL, NULL, NULL, 'notdone', '2026-11-20 19:00:48', '2026-11-20 19:00:48'),
+(301, 49, 28, 7, NULL, NULL, NULL, NULL, 'notdone', '2026-11-21 19:00:48', '2026-11-21 19:00:48'),
+(302, 49, 28, 8, NULL, NULL, NULL, NULL, 'notdone', '2026-11-22 19:00:48', '2026-11-22 19:00:48'),
+(303, 49, 28, 9, NULL, NULL, NULL, NULL, 'notdone', '2026-11-23 19:00:48', '2026-11-23 19:00:48'),
+(304, 49, 28, 10, NULL, NULL, NULL, NULL, 'notdone', '2026-11-24 19:00:48', '2026-11-24 19:00:48'),
+(305, 49, 28, 11, NULL, NULL, NULL, NULL, 'notdone', '2026-11-25 19:00:48', '2026-11-25 19:00:48'),
+(306, 49, 28, 12, NULL, NULL, NULL, NULL, 'notdone', '2026-11-26 19:00:48', '2026-11-26 19:00:48'),
+(307, 49, 28, 13, NULL, NULL, NULL, NULL, 'notdone', '2026-11-27 19:00:48', '2026-11-27 19:00:48'),
+(308, 49, 28, 14, NULL, NULL, NULL, NULL, 'notdone', '2026-11-28 19:00:48', '2026-11-28 19:00:48'),
+(309, 49, 29, 1, 'task-screenshots/01M7FHBQ0E40NMXR1PEDXA3RXD.jpeg', 'Daily Task Submission', 'Halaman login tidak responsive', NULL, 'done', '2026-11-15 19:00:48', '2026-11-15 19:02:17'),
+(310, 49, 29, 2, NULL, NULL, NULL, NULL, 'notdone', '2026-11-16 19:00:48', '2026-11-16 19:00:48'),
+(311, 49, 29, 3, NULL, NULL, NULL, NULL, 'notdone', '2026-11-17 19:00:48', '2026-11-17 19:00:48'),
+(312, 49, 29, 4, NULL, NULL, NULL, NULL, 'notdone', '2026-11-18 19:00:48', '2026-11-18 19:00:48'),
+(313, 49, 29, 5, NULL, NULL, NULL, NULL, 'notdone', '2026-11-19 19:00:48', '2026-11-19 19:00:48'),
+(314, 49, 29, 6, NULL, NULL, NULL, NULL, 'notdone', '2026-11-20 19:00:48', '2026-11-20 19:00:48'),
+(315, 49, 29, 7, NULL, NULL, NULL, NULL, 'notdone', '2026-11-21 19:00:48', '2026-11-21 19:00:48'),
+(316, 49, 29, 8, NULL, NULL, NULL, NULL, 'notdone', '2026-11-22 19:00:48', '2026-11-22 19:00:48'),
+(317, 49, 29, 9, NULL, NULL, NULL, NULL, 'notdone', '2026-11-23 19:00:48', '2026-11-23 19:00:48'),
+(318, 49, 29, 10, NULL, NULL, NULL, NULL, 'notdone', '2026-11-24 19:00:48', '2026-11-24 19:00:48'),
+(319, 49, 29, 11, NULL, NULL, NULL, NULL, 'notdone', '2026-11-25 19:00:48', '2026-11-25 19:00:48'),
+(320, 49, 29, 12, NULL, NULL, NULL, NULL, 'notdone', '2026-11-26 19:00:48', '2026-11-26 19:00:48'),
+(321, 49, 29, 13, NULL, NULL, NULL, NULL, 'notdone', '2026-11-27 19:00:48', '2026-11-27 19:00:48'),
+(322, 49, 29, 14, NULL, NULL, NULL, NULL, 'notdone', '2026-11-28 19:00:48', '2026-11-28 19:00:48');
 
 -- --------------------------------------------------------
 
@@ -411,7 +477,14 @@ INSERT INTO `pembayaran` (`id`, `image`, `status`, `id_user`, `id_admin`, `id_pa
 (37, NULL, 'accepted', 16, NULL, 5, 40, '2026-06-09 08:40:16', '2026-06-09 08:41:21', 'MISI-40-1780969215', 'https://sandbox.duitku.com/topup/v2/TopUpCreditCardPayment.aspx?reference=DS3076426BBQ36I0NVJ2S04B'),
 (38, NULL, 'accepted', 18, NULL, 5, 41, '2026-06-09 02:02:02', '2026-06-09 02:02:02', 'DEMO-EDUKID-2026', NULL),
 (39, NULL, 'accepted', 18, NULL, 5, 42, '2026-06-09 09:16:12', '2026-06-09 09:17:07', 'MISI-42-1780971372', 'https://sandbox.duitku.com/topup/v2/TopUpCreditCardPayment.aspx?reference=DS3076426AL4BSJSQIZQ7ETK'),
-(40, NULL, 'accepted', 25, NULL, 5, 43, '2026-06-09 09:48:37', '2026-06-09 09:49:17', 'MISI-43-1780973316', 'https://sandbox.duitku.com/topup/v2/TopUpCreditCardPayment.aspx?reference=DS3076426O611BY31A8TY3PP');
+(45, NULL, 'accepted', 2, NULL, 4, 48, '2026-11-15 18:48:45', '2026-11-15 18:52:17', 'MISI-48-1794743325', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26G3FXX7DJH7V2BVD'),
+(46, NULL, 'accepted', 2, NULL, 5, 49, '2026-11-15 18:56:22', '2026-11-15 18:56:49', 'MISI-49-1794743781', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR267JW7GJP4JWGDYN6'),
+(47, NULL, 'accepted', 2, NULL, 5, 50, '2026-11-16 13:09:06', '2026-11-16 13:09:43', 'MISI-50-1794809345', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26MYHEEFZGVKETZ2K'),
+(48, NULL, 'accepted', 2, NULL, 5, 51, '2026-11-16 14:30:38', '2026-11-16 14:37:21', 'MISI-51-1794814237', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26VWJGNOGIJH2JS6X'),
+(49, NULL, 'accepted', 2, NULL, 5, 52, '2026-11-16 14:41:15', '2026-11-16 14:56:28', 'MISI-52-1794814874', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26TMFAZHIDDAMRFB5'),
+(50, NULL, 'accepted', 2, NULL, 4, 53, '2026-11-16 15:04:42', '2026-11-16 15:19:57', 'MISI-53-1794816281', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26AHUSU4S2UUT0OP3'),
+(51, NULL, 'accepted', 2, NULL, 4, 54, '2026-11-16 15:24:39', '2026-11-16 15:28:17', 'MISI-54-1794817478', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26XP50TO8PDDK04V6'),
+(52, NULL, 'pending', 2, NULL, 5, 55, '2026-11-16 15:30:27', '2026-11-16 15:30:27', 'MISI-55-1794817826', 'https://sandbox.duitku.com/topup/topupdirectv2.aspx?ref=BR26Y10G5YQSKK0AEAO');
 
 -- --------------------------------------------------------
 
@@ -433,14 +506,33 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('6DA2WGG5drIgHFdtfxPVWbSdixadHBrMxXwP8WEG', 6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiI2d0p6SGRycUVpZjA3ellseHJ6eGxmWFFCNWtpaWdUOTQ4S1NUQlhkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjgwMDBcL2RldmVsb3BlclwvbWlzaXNcLzE3XC9rZWxvbGEtdGVzdGVyIiwicm91dGUiOiJmaWxhbWVudC5kZXZlbG9wZXIucmVzb3VyY2VzLm1pc2lzLmtlbG9sYS10ZXN0ZXIifSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjYsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyIsImZpbGFtZW50IjpbXSwidGFibGVzIjp7ImE1ZDAzMjM5MjE5YTI3ZWVhYTg3ZTkwODM3NWFlZTk5X2NvbHVtbnMiOlt7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoibG9nb192aWV3IiwibGFiZWwiOiJMb2dvIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6Im5hbWFfYXBsaWthc2kiLCJsYWJlbCI6Ik5hbWEgQXBsaWthc2kiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoicGFrZXQubmFtZSIsImxhYmVsIjoiUGFrZXQiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoia2FwYXNpdGFzIiwibGFiZWwiOiJLYXBhc2l0YXMiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoicG9pbnQiLCJsYWJlbCI6IlBvaW50IiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6InN0YXR1cyIsImxhYmVsIjoiU3RhdHVzIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6ImNyZWF0ZWRfYXQiLCJsYWJlbCI6IkRpYnVhdCIsImlzSGlkZGVuIjpmYWxzZSwiaXNUb2dnbGVkIjp0cnVlLCJpc1RvZ2dsZWFibGUiOnRydWUsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6ZmFsc2V9XSwiZDJkNWJkZTVlYjNmNTEwYmE0OTAwZDhkM2ZkMmQ0NzVfY29sdW1ucyI6W3sidHlwZSI6ImNvbHVtbiIsIm5hbWUiOiJ1c2VyLm5hbWUiLCJsYWJlbCI6Ik5hbWEgVGVzdGVyIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6InN0YXR1cyIsImxhYmVsIjoiU3RhdHVzIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6ImNyZWF0ZWRfYXQiLCJsYWJlbCI6IkJlcmdhYnVuZyBQYWRhIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH1dfX0=', 1778466763),
-('9wy0S3fqbE8TuNUD7GCWZE0XJWnTtvANx2668S49', 2, '127.0.0.1', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1', 'eyJfdG9rZW4iOiJoYWhuRmJlVzRmbXNVNXl4cGs5cktkZUxURjVhRmx1ZTVndUF2bTlBIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2E2YjEtMTAzLTE4Mi0yMzQtMjI2Lm5ncm9rLWZyZWUuYXBwXC9kZXZlbG9wZXJcL21pc2lzXC9jcmVhdGUiLCJyb3V0ZSI6ImZpbGFtZW50LmRldmVsb3Blci5yZXNvdXJjZXMubWlzaXMuY3JlYXRlIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjIsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyJ9', 1779067556),
-('DDpKEnjqPNKY2cb7j4DZkMN846HTPPk3C6gorlVv', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJCd0hodFJOTkduZ2N1ZlhBWlR5R1lCZWVpVXNoWEs4eGZEYzZtWTZzIiwidXJsIjpbXSwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC90ZXN0ZXJcL3Rlc3Rlci1kYXNoYm9hcmQiLCJyb3V0ZSI6ImZpbGFtZW50LnRlc3Rlci5wYWdlcy50ZXN0ZXItZGFzaGJvYXJkIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjQsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyIsImZpbGFtZW50IjpbXX0=', 1778466761),
-('E8jGnBzCeGn59iGvCv6gBXwSIRi3GOhw2dwP6PtB', 8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJqTGhQWERGdDU3Z1c4am9UVmp5eDd4SWNSbHBUaFZZZ29iWm5oWUdZIiwidXJsIjpbXSwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC90ZXN0ZXJcL3Rlc3Rlci1kYXNoYm9hcmQiLCJyb3V0ZSI6ImZpbGFtZW50LnRlc3Rlci5wYWdlcy50ZXN0ZXItZGFzaGJvYXJkIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjgsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyIsImZpbGFtZW50IjpbXX0=', 1778466761),
-('hCpTe7LOrgTMkIKsxAdAkJ70HEQrldftro8QlEgn', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJqbThSeHR3em1CdUh2MTlnUUptM0QwSDlEUjkzWGNvaEdqYnVPajFZIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4MDAwXC9hZG1pblwvbWFuYWplbWVuLXBlbWJheWFyYW4iLCJyb3V0ZSI6ImZpbGFtZW50LmFkbWluLnBhZ2VzLm1hbmFqZW1lbi1wZW1iYXlhcmFuIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjEsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyJ9', 1778466762),
-('MbHdqvz7AYz5AQOkrZlsntAeX33z3WUgzBXAqHkX', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiI3djlsMHdIUXV6dXk3WUI4M1RCVWplNnFwdFZ3REY2RkN3WW5ZY2ZrIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2E2YjEtMTAzLTE4Mi0yMzQtMjI2Lm5ncm9rLWZyZWUuYXBwXC9kZXZlbG9wZXJcL21pc2lzXC9jcmVhdGUiLCJyb3V0ZSI6ImZpbGFtZW50LmRldmVsb3Blci5yZXNvdXJjZXMubWlzaXMuY3JlYXRlIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjIsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyJ9', 1779067798),
-('TA0zIOaRuxJhPRe7UoALQ0SVWrbinrLFaalIW453', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJ3dFZZV3ZVRjBYYTR3T21WREJjbVJqR05tallkWVlBQ0Q2b0dDZkhHIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9kZXZlbG9wZXIiLCJyb3V0ZSI6ImZpbGFtZW50LmRldmVsb3Blci5wYWdlcy4uIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjIsInBhc3N3b3JkX2hhc2hfd2ViIjoiOTA5MWFiOTE4NDE4MTFiY2I4MTVhODMxNTBiNzQzMTViMGRhN2QyNzRkOWIxZDA2MjJmYzc1MDIyNGQyYzA2MyJ9', 1779066858),
-('w70qb3uAN1XuemqMrUuXAMOYOR79Gc7snVJ7vd49', NULL, '127.0.0.1', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1', 'eyJfdG9rZW4iOiJOZ1BoeTNvM0J0V1kzYVBGUXdNSFBwazl5a25PeHZHSnBnMnJjY0s5IiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cLzllNGMtMTAzLTE4My01LTk4Lm5ncm9rLWZyZWUuYXBwXC9kZXZlbG9wZXJcL2xvZ2luIiwicm91dGUiOiJmaWxhbWVudC5kZXZlbG9wZXIuYXV0aC5sb2dpbiJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19', 1779066983);
+('1Jj9uisbHOWq8WFvq15yT0rdFhlGYcZeeM6tNXsX', 1, '114.10.155.181', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiI3WFFxcldKbldTY1VYUFA3N3FhMU1oSXVETkhZR0t1VmMyNXJkemU2IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfSwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjEsInBhc3N3b3JkX2hhc2hfd2ViIjoiZTU5NWY2NTAyOTY0MGI2MzYyZjIyM2QwY2JlNDJlYjMwMmU5NzUwNGUyYjllOGU0YzY0YmJhYzNmMTNhNWVmYiIsInRhYmxlcyI6eyJjYTRlZGU5ODY4YmViYzNlYWFjMDJiMDI4MDliZGVjY19jb2x1bW5zIjpbeyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6Im5hbWUiLCJsYWJlbCI6Ik5hbWEgUGFrZXQiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoic2hvcnRfZGVzYyIsImxhYmVsIjoiU3VidGl0bGUiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoicHJpY2UiLCJsYWJlbCI6IkhhcmdhIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6ImZlZSIsImxhYmVsIjoiRmVlIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6InBvaW50IiwibGFiZWwiOiJQb2luIFJld2FyZCIsImlzSGlkZGVuIjpmYWxzZSwiaXNUb2dnbGVkIjp0cnVlLCJpc1RvZ2dsZWFibGUiOmZhbHNlLCJpc1RvZ2dsZWRIaWRkZW5CeURlZmF1bHQiOm51bGx9LHsidHlwZSI6ImNvbHVtbiIsIm5hbWUiOiJtb3N0X3BvcHVsYXIiLCJsYWJlbCI6IlRlcnBvcHVsZXIiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfSx7InR5cGUiOiJjb2x1bW4iLCJuYW1lIjoiYWt0aWYiLCJsYWJlbCI6IkFrdGlmIiwiaXNIaWRkZW4iOmZhbHNlLCJpc1RvZ2dsZWQiOnRydWUsImlzVG9nZ2xlYWJsZSI6ZmFsc2UsImlzVG9nZ2xlZEhpZGRlbkJ5RGVmYXVsdCI6bnVsbH0seyJ0eXBlIjoiY29sdW1uIiwibmFtZSI6InRydXN0ZWRfYmFkZ2UiLCJsYWJlbCI6IlRydXN0ZWQgQmFkZ2UiLCJpc0hpZGRlbiI6ZmFsc2UsImlzVG9nZ2xlZCI6dHJ1ZSwiaXNUb2dnbGVhYmxlIjpmYWxzZSwiaXNUb2dnbGVkSGlkZGVuQnlEZWZhdWx0IjpudWxsfV19fQ==', 1794817036),
+('5giFf5XuleGX8T4BrxcaAdAmmXcZ9hdHNTb4DcF1', NULL, '36.50.157.20', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36', 'eyJfdG9rZW4iOiJDWExJeldDQ2F5UWVMdjRySU5ITFY1MGdoRkE2SUVHMzJ5aFNXNVNFIiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794820332),
+('a0Y5gu3Wzma8u8xYV1GfGM5xVdteoc2a1GAqoaba', NULL, '205.169.39.201', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36', 'eyJfdG9rZW4iOiJrY2EzeG01U1NVYTRPdVVLTDlQTzJVR051bVJuVnBCMllxckpGTHVJIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2VuIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794811685),
+('azFgeVdEwYWs7tC5Rv5ZPcD5VHAd8Zvi3WFnKQZt', NULL, '182.3.33.133', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36', 'eyJfdG9rZW4iOiJmUTY3VXRCZ1ZGd05GQmdHVjdHbGxhUU03dkc0eHRTRmM5YkVBV1pQIiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794820333),
+('BiMp6H6Jfs1pmjos0pSKiXeEQipvu176rHqUz1Il', NULL, '34.90.247.240', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJOUFVLOVBVR2hxVXpoNllDcm9CYU0xZ2pnZHd3Yk9DR0ZCZHdjTWdZIiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWQiLCJyb3V0ZSI6bnVsbH0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794822712),
+('boVyEz5XCn9TVZ8PUYTWcEDEJ57NT64iCRL96Zqh', NULL, '114.8.219.106', 'WhatsApp/2.23.20.0', 'eyJfdG9rZW4iOiJUYm10ZzlZQVVlODQ5aU5ZcGdQUEJaQnJHQ3hMaFZleEI3bGN6amI5IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2FkbWluXC9sb2dpbiIsInJvdXRlIjoiZmlsYW1lbnQuYWRtaW4uYXV0aC5sb2dpbiJ9LCJfZmxhc2giOnsib2xkIjpbXSwibmV3IjpbXX19', 1794825150),
+('cDJ0uqYVUO4yMijEWRPpcZlw1z71IWHO4B7by2QK', NULL, '152.32.128.85', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/577.46 (KHTML, like Gecko) Chrome/79.0.76 Safari/537.36', 'eyJfdG9rZW4iOiJoUEZyMHIza3Vna0JmZVBVcnpHNXluRlJ6TnNXTDl5TTREZ1ZYZUg4IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794810157),
+('EEcIx54XyuIuE1LgD7SsjpQq6408sWdthIMpsdmK', NULL, '103.177.101.188', 'Duitku Callback Agent', 'eyJfdG9rZW4iOiJ1am1vdW12WVZSYXpndXFPSDRKY25rbjNqN3NxU3FEQUtMVFl4T0JzIiwiYXBwX2xvY2FsZSI6ImlkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794814641),
+('ekmFbuEsEv6yfGPt3JbXK3zeLegQezOEIdGh9i6o', NULL, '52.89.130.89', 'axios/1.10.0', 'eyJfdG9rZW4iOiJRRkRpY2hWd0NqRGhMcWdQWDREVUxrRW0xN25XaTRhM1lXaTRsRGw5IiwiYXBwX2xvY2FsZSI6ImlkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794816117),
+('gIN9GwbkOByGIGNTBl9l8ByjuZ6ridCoAbQa0Ldo', NULL, '103.177.101.188', 'Duitku Callback Agent', 'eyJfdG9rZW4iOiJJWnNpWDRsTDFuZHNrcmZlZVlLNVdVREJ2Q1FXbHBvd3JYRko3cHhaIiwiYXBwX2xvY2FsZSI6ImlkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794815788),
+('gzOpIlIQZ2iHidItxoXq5lCzv7eyg31g2eTFOpCo', NULL, '205.169.39.201', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36', 'eyJfdG9rZW4iOiJrWU1NaGZyeEkyN01YY3hwdjJRekFSUVF0U0Z0bktVOEEzWHByc1ZWIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2VuIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794811677),
+('hCDGs7XVLwqaUzZDWO18jGMcXdZyBs3l7DXMCTfF', NULL, '44.204.251.120', 'Mozilla/5.0 (Mac OS X 13_2) AppleWebKit/537.36 (KHTML, like Gecko) Safari/126.0 Safari/537.36', 'eyJfdG9rZW4iOiI4SmRoNHhDNGxoSFlkQzBnbThZV1lHaGpiYnh3eWw1NVpvVm00MzhUIiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWQiLCJyb3V0ZSI6bnVsbH0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794810512),
+('ILPRU61fIoKzgOwO0IfQAuzqlmVQmmUWaBLD3pBK', 28, '114.10.155.181', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJKYW9IZjdvanRFUUJ3c0NlejZpRnMwSzI5TGpKY3I1RTB5dTZBeUJaIiwibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiOjI4LCJwYXNzd29yZF9oYXNoX3dlYiI6Ijg2MTUxOTNiZjE4NTdiMGVjOWRiMjgzMmQ4ZjNmZTFlYzI4ODYwMzY5MDA2YWU3MTQwMDUzODEyYmFjYzg1MDYiLCJhcHBfbG9jYWxlIjoiZW4iLCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cHM6XC9cL3Rlc3RvcGxheS5teS5pZFwvdGVzdGVyXC9taXNpLXNheWEiLCJyb3V0ZSI6ImZpbGFtZW50LnRlc3Rlci5wYWdlcy5taXNpLXNheWEifSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJmaWxhbWVudCI6W119', 1794817230),
+('iP64BmPwhwj9RCgcH4iOrE1ryur1Z2sj723skV8t', NULL, '20.119.215.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJoYktGMGVVUU5FOGRtZkhKZEs5Z1lLZXAxQ2hROVo3c3lUbXlqMUFwIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2VuIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794819427),
+('Jh04Vd3zdud14LSxrWdu0dRZOqnRy6KOLSYY9WSM', NULL, '103.177.101.188', 'Duitku Callback Agent', 'eyJfdG9rZW4iOiJZcW9OQ0pPNGxDeGJkbDhUS2hyV2JmeDhyWlI0bXhvWXJ6Z2ZaWGw3IiwiYXBwX2xvY2FsZSI6ImlkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794817697),
+('jiMbLlQwlf6t0nplHGrCFogjE9LUYRbh4fkkMgNX', 2, '114.10.155.181', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiI3cHdyQzBwdk1xNkp5VFliOWJaeWNxU3A1RzhBdExHQ2lCeDhWTmt0IiwiYXBwX2xvY2FsZSI6ImlkIiwidXJsIjpbXSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119LCJfcHJldmlvdXMiOnsidXJsIjoiaHR0cHM6XC9cL3Rlc3RvcGxheS5teS5pZFwvZGV2ZWxvcGVyXC9taXNpc1wvY3JlYXRlIiwicm91dGUiOiJmaWxhbWVudC5kZXZlbG9wZXIucmVzb3VyY2VzLm1pc2lzLmNyZWF0ZSJ9LCJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI6MiwicGFzc3dvcmRfaGFzaF93ZWIiOiJlNTk1ZjY1MDI5NjQwYjYzNjJmMjIzZDBjYmU0MmViMzAyZTk3NTA0ZTJiOWU4ZTRjNjRiYmFjM2YxM2E1ZWZiIiwiZmlsYW1lbnQiOnsiY2xhaW1lZF9ub3RpZmljYXRpb25zIjpbeyJpZCI6ImEzM2NkYmU3LWVkMDgtNDZhMS04ZTcwLTM1N2YzMjNmNmU2MCIsImFjdGlvbnMiOltdLCJib2R5IjpudWxsLCJjb2xvciI6bnVsbCwiZHVyYXRpb24iOjYwMDAsImljb24iOiJoZXJvaWNvbi1vLWNoZWNrLWNpcmNsZSIsImljb25Db2xvciI6InN1Y2Nlc3MiLCJzdGF0dXMiOiJzdWNjZXNzIiwidGl0bGUiOiJEYXRhIGJlcmhhc2lsIGRpYnVhdCIsInZpZXciOm51bGwsInZpZXdEYXRhIjpbXX1dfX0=', 1794817936),
+('jXfSefCECODZNw1KyoNJX6iOI6iUbmTTk1fUDymW', NULL, '20.119.215.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiI2Qnl6QjVkZ09zb0tHb1hEVEVwVUFmN0cydDQwejNndkVWSm9qZlNZIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWQiLCJyb3V0ZSI6bnVsbH0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794819425),
+('kxK2MQdQ6RX18aVUhZPFiArl7j29SmFnS1hK2zX6', NULL, '20.119.215.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJ1REc0enFHSmFDQ0VsU2JPTFl6UGxzcXBhSXR1NEhHdmVQSXVGSTlaIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2VuIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794819430),
+('NryW2x2KnD2dBxcJBVxAdlHPOfsy0MOeh450UR1r', NULL, '152.32.128.85', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 8_2_1) AppleWebKit/549.45 (KHTML, like Gecko) Chrome/105.0.1461 Safari/537.36', 'eyJfdG9rZW4iOiJnRHFhVXE5bWk1TjBUem9NeUh3Y1l2NVhDZ1FvTG9xRDhtNzFNeGh1IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWQiLCJyb3V0ZSI6bnVsbH0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794810152),
+('O5IzD4Y7wo2lk4JuImw6rdvKsJPWkO31jUA3QVo2', NULL, '34.122.147.229', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36 Edge/12.246', 'eyJfdG9rZW4iOiJpUDdVSFNxbnFOUzBycnFwNnB4T3VXa2FDNTE5a3BSUG1ZSGRocHk3IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794811647),
+('OeTPjkCLXvbFwgj8yLO4uwv53yzBZtkA5aqwmkwO', NULL, '104.28.228.77', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJ3cHdCbnA5aXZPejdSd3BpbXJRNGl6VW9JRjgzRFNXVFdSYzM0SnpIIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2VuIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794816669),
+('ofPhLi2ekACWF5o6ABWBBDsKt6YLT4lxzzxdaVhG', NULL, '44.204.251.120', 'Mozilla/5.0 (Mac OS X 13_2) AppleWebKit/537.36 (KHTML, like Gecko) Safari/108.0 Safari/537.36', 'eyJfdG9rZW4iOiJJZjFBWjl0MXhUMkhWMkFUS1dZSUZrR0VGSHdMSFAwOW1lVjVEcWo2IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL3Rlc3RvcGxheS5teS5pZCIsInJvdXRlIjpudWxsfSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794810515),
+('qbzNaNH5FNVQZ53Ho37eiNCwAsgkFfidm4FpOA1g', NULL, '104.28.228.77', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJjZDlFcE9nWUZRMVFnaWU2OFFrNWxqQmJ1VnNWT2xMMXQ2djcyTWdlIiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWQiLCJyb3V0ZSI6bnVsbH0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794816667),
+('qDxtqRKY1ujEqcD922KrxsJLvJIgUypOMbrW7F84', NULL, '34.72.176.129', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.60 Safari/537.36 Edge/12.246', 'eyJfdG9rZW4iOiJicGhQdVhoZTNCNnlXTWs2ejBva0RnenpxRGxZVzFuTjBXNVNySG1SIiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794811671),
+('qrd02PoFkO41rUI3SZn0SYUUMScrFZKZlU0CbCly', NULL, '103.177.101.188', 'Duitku Callback Agent', 'eyJfdG9rZW4iOiJVMnBGMTg3M2NUb29TYVJMaFFCYVNHdHNHQjhCdVZzVU5oWlJIY0tNIiwiYXBwX2xvY2FsZSI6ImlkIiwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794817197),
+('tnazAVr8mFtpWzZbasQz5NMKplDNX6sONYK5PrGS', NULL, '20.119.215.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36', 'eyJfdG9rZW4iOiJGeXRZV1JPSGtpeVVmN1NRS0RmSzNnT3AydklqWEYzeUpjVFM2V1Q0IiwiYXBwX2xvY2FsZSI6ImVuIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHA6XC9cL3Rlc3RvcGxheS5teS5pZCIsInJvdXRlIjpudWxsfSwiX2ZsYXNoIjp7Im9sZCI6W10sIm5ldyI6W119fQ==', 1794819428),
+('V6wiBT9SwvBXCWESiWu9jUyIifU3Xd33qcrJKW6J', NULL, '158.140.163.17', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Mobile Safari/537.36', 'eyJfdG9rZW4iOiJCVW9aS2F5U0FNVmg5VUVqVnFwMEFZMTJvTzZhM3pIeHlSdlVTVzN4IiwiYXBwX2xvY2FsZSI6ImlkIiwiX3ByZXZpb3VzIjp7InVybCI6Imh0dHBzOlwvXC90ZXN0b3BsYXkubXkuaWRcL2lkIiwicm91dGUiOiJ3ZWxjb21lIn0sIl9mbGFzaCI6eyJvbGQiOltdLCJuZXciOltdfX0=', 1794820328);
 
 -- --------------------------------------------------------
 
@@ -466,25 +558,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `google_id`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, NULL, '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'admin', NULL, '2026-04-09 06:04:02', '2026-04-09 06:04:02'),
-(2, 'developer 1', 'developer1@gmail.com', NULL, NULL, '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'developer', NULL, '2026-04-09 07:26:42', '2026-04-09 07:26:42'),
-(4, 'Admin', 'chocopufff1@gmail.com', '108649342101070176922', NULL, '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'tester', NULL, '2026-04-12 22:22:24', '2026-06-09 09:12:28'),
+(1, 'admin', 'admin@gmail.com', NULL, NULL, '$2y$12$qWpmaMUGH3GH6ejs805cluCSkuLNkIXbgG3mXrzcJEUQAukTdPeam', 'admin', NULL, '2026-04-09 06:04:02', '2026-04-09 06:04:02'),
+(2, 'developer', 'developer@gmail.com', NULL, NULL, '$2y$12$qWpmaMUGH3GH6ejs805cluCSkuLNkIXbgG3mXrzcJEUQAukTdPeam', 'developer', NULL, '2026-04-09 07:26:42', '2026-04-09 07:26:42'),
 (6, 'developer', 'developer2@gmail.com', NULL, NULL, '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'developer', NULL, '2026-04-13 17:34:57', '2026-04-13 17:34:57'),
 (8, 'Wahda Adella', 'tester@gmail.com', NULL, NULL, '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'tester', NULL, '2026-04-26 07:16:53', '2026-04-26 07:16:53'),
 (9, 'Wahda', 'wahdaadella@gmail.com', NULL, NULL, '$2y$12$km0Dty06AUilqLNCF5/eE.s8ltIJEztpq4KSuEW9XHlCRFMIjA8Q6', 'tester', NULL, '2026-05-01 13:15:00', '2026-05-01 13:15:00'),
 (14, 'tester', 'chocopufff10@gmail.com', NULL, '2026-06-08 08:04:47', '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'developer', 'pkdjj44agLsPBFDvGDnSkAx9GaYU0Ikwri48YmPuzSfyg8BkPeqViSI4zcK7', '2026-06-08 08:04:47', '2026-06-08 08:04:47'),
-(15, 'tester', 'chocopufff9@gmail.com', NULL, '2026-06-08 08:08:40', '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'tester', '1utVz8HyF0w9LhPlBCHcMGutGI1nTk9Us4or7xVP55FyeZLEwh2CDgXUmOj7', '2026-06-08 08:08:40', '2026-06-08 08:08:40'),
+(15, 'tester', 'chocopufff9@gmail.com', NULL, '2026-06-08 08:08:40', '$2y$12$qWpmaMUGH3GH6ejs805cluCSkuLNkIXbgG3mXrzcJEUQAukTdPeam', 'tester', '86FM92TNZMwcs9dk8r8BYLUS0MNOwUJ66woQCVx4QfQDrUBevJi2sBrPYrvj', '2026-06-08 08:08:40', '2026-11-15 13:33:12'),
 (16, 'PlayTest ID', 'playtestid6@gmail.com', '100179469942623982430', '2026-06-08 08:54:15', '$2y$12$OOjacfoUjL/VcH5y6PRSQuY08.1pMi4ak7lvsJsSCnTIbZ2yw3S4W', 'admin', NULL, '2026-06-08 08:54:15', '2026-06-08 08:54:15'),
 (17, 'Computer Name', 'namecomputer10@gmail.com', '115855188434030144994', '2026-06-08 08:54:59', '$2y$12$hG1kPZ0x9ICKGpA.wBkFw.y1oBWy9EwbspCD0OLLjml0sR5BWm3zm', 'developer', NULL, '2026-06-08 08:54:59', '2026-06-08 08:54:59'),
 (18, '29_Rakagali Resda', 'rakaesal@gmail.com', '100787731903979054662', '2026-06-08 09:44:05', '$2y$12$.UpQi9zwUfrcqvUmCbamYeDE4tNEPNkmsk8Xdl6EI1G66XPNPirB2', 'developer', NULL, '2026-06-08 09:44:05', '2026-06-08 09:44:05'),
 (19, 'Choco Puff', 'chocopufff6@gmail.com', '103820171972478518059', '2026-06-08 09:52:12', '$2y$12$xlnWM2kyrLDAWGO//od4POy/RDH2NSEA1AV1ua0hK3DC.rhmoDn92', 'developer', NULL, '2026-06-08 09:52:12', '2026-06-08 09:52:12'),
 (20, 'Faesal Gali', 'faesalgali@gmail.com', '103217678078366785531', '2026-06-08 09:54:52', '$2y$12$FKppGkcBb3VO/jvMLdo6XuFJq.JFjPQ0DYnFQvnrf0yOYceukXeSe', 'tester', NULL, '2026-06-08 09:54:52', '2026-06-08 09:54:52'),
-(21, 'Choco Puff', 'chocopufff3@gmail.com', '111466424894671134295', '2026-06-09 08:47:28', '$2y$12$RuwJSBhGH1NrG2qAq.HGG.HxakXANZWkIlBQv500sG0XzsdliBDu.', 'tester', NULL, '2026-06-09 08:47:28', '2026-06-09 08:47:28'),
 (22, 'Tester Demo 1', 'testerdemo1@playtest.id', NULL, '2026-06-09 02:02:02', '$2y$12$Toh8APoZWTf5iUtf5ehRbeQWyVbywVwh7.ZwioMSSGPiLUnktFbTy', 'tester', NULL, '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
 (23, 'Tester Demo 2', 'testerdemo2@playtest.id', NULL, '2026-06-09 02:02:02', '$2y$12$JAxsoi/fUIXrYu9bKsLsa.EKdpOnSOctsI0N58hzuNSEk7hiHg7qi', 'tester', NULL, '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
 (24, 'Tester Demo 3', 'testerdemo3@playtest.id', NULL, '2026-06-09 02:02:02', '$2y$12$5v2M9BnlEw1.1rIu5r3f6O.73Y8.M0TO8FeYYrcdiWbIo0h9eRaE2', 'tester', NULL, '2026-06-09 02:02:02', '2026-06-09 02:02:02'),
-(25, 'Choco Puff', 'chocopufff2@gmail.com', '106718283299884324107', '2026-06-09 09:47:03', '$2y$12$RZZtJSYOvyK1HPHFNfmxI.BLOyBoZx5xAZDtuPWr6vNLR1DDOtGb.', 'developer', NULL, '2026-06-09 09:47:03', '2026-06-09 09:47:03'),
-(26, 'Wahda', 'chocopufff5@gmail.com', NULL, '2026-06-09 09:50:34', '$2y$12$iBANnoUoVz4hu3lTULeaTegSJ80ELps9D0Bmf.U0vXlUcbirD5P8a', 'tester', '2WupoNKHHVD6BsYgNuXerr7BrZzJycoIel3ZUltdfBiftC0zunnL3A0Htq4W', '2026-06-09 09:50:34', '2026-06-09 09:50:34');
+(26, 'Wahda', 'chocopufff5@gmail.com', NULL, '2026-06-09 09:50:34', '$2y$12$iBANnoUoVz4hu3lTULeaTegSJ80ELps9D0Bmf.U0vXlUcbirD5P8a', 'tester', '2WupoNKHHVD6BsYgNuXerr7BrZzJycoIel3ZUltdfBiftC0zunnL3A0Htq4W', '2026-06-09 09:50:34', '2026-06-09 09:50:34'),
+(28, 'Tester1', 'chocopufff1@gmail.com', NULL, '2026-11-15 18:41:49', '$2y$12$dJNQXgz.QZbnYfSi1xi.meNk/b/d.BHg4/bPUCAPL9tARbVCu5R2q', 'tester', 'L1P4L7SVSsmiKdusto388GyfBENyjRgFS8MKjQmBOZFPMFNHrYnY8ZpC6aoc', '2026-11-15 18:41:49', '2026-11-15 18:41:49'),
+(29, 'Tester2', 'chocopufff2@gmail.com', NULL, '2026-11-15 18:44:54', '$2y$12$bZJDjX/maR1Z.EAq3/vULOQs4Q42/VgJ1YXxFZAEo6oGNfNB8RCIy', 'tester', 'twEWUMlKSp8zkv8CQowI5zxIKxBFC9V5ZG56UI9agw7NBJqpuIHvNR1jimzy', '2026-11-15 18:44:54', '2026-11-15 18:44:54'),
+(30, 'tester3', 'chocopufff3@gmail.com', NULL, '2026-11-15 18:47:21', '$2y$12$W2/7feC17hBTJ2G4GSUfT.nbqeG6x1tdxiwGfnIXs/ECk9lHh8sxe', 'tester', 'MUgv6JrS3O3myLNnS3Y3wjAaqRI1FepOTbN5cW6uxnnPt9tjLQcX8ogT63BT', '2026-11-15 18:47:21', '2026-11-15 18:47:21');
 
 -- --------------------------------------------------------
 
@@ -521,15 +613,16 @@ CREATE TABLE `user_balance` (
 
 INSERT INTO `user_balance` (`id`, `id_user`, `point`, `badge`, `created_at`, `updated_at`) VALUES
 (1, 8, 9999699, 10, '2026-04-26 07:16:53', '2026-06-08 07:37:51'),
-(2, 4, 86175, 16, NULL, '2026-06-09 09:59:39'),
 (3, 9, 80, 50, '2026-05-01 13:15:00', '2026-05-08 08:20:12'),
-(8, 15, 0, 50, '2026-06-08 08:08:40', '2026-06-08 08:08:40'),
+(8, 15, 9999699, 50, '2026-06-08 08:08:40', '2026-11-15 14:54:41'),
 (9, 20, 0, 0, '2026-06-08 09:54:52', '2026-06-08 09:54:52'),
-(10, 21, 0, 0, '2026-06-09 08:47:28', '2026-06-09 08:47:28'),
 (11, 22, 15000, 2, '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
 (12, 23, 15000, 1, '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
 (13, 24, 15000, 3, '2026-06-09 02:02:02', '2026-06-09 09:02:34'),
-(14, 26, 0, 0, '2026-06-09 09:50:35', '2026-06-09 09:50:35');
+(14, 26, 0, 0, '2026-06-09 09:50:35', '2026-06-09 09:50:35'),
+(15, 28, 999849, 6, '2026-11-15 18:41:49', '2026-11-16 14:57:58'),
+(16, 29, 999999, 6, '2026-11-15 18:44:54', '2026-11-15 18:44:54'),
+(17, 30, 999999, 0, '2026-11-15 18:47:21', '2026-11-15 18:47:21');
 
 -- --------------------------------------------------------
 
@@ -558,20 +651,10 @@ CREATE TABLE `withdraw` (
 --
 
 INSERT INTO `withdraw` (`id`, `id_user`, `id_admin`, `point`, `rupiah`, `metode`, `nomor_akun`, `xendit_payout_id`, `image`, `status`, `catatan`, `created_at`, `updated_at`) VALUES
-(6, 4, NULL, 150, 10000, 'gopay', '081515385477', 'disb-713dbd04-013f-409b-bd04-b5b953c5833d', NULL, 'success', 'Withdrawal completed via Xendit.', '2026-06-03 05:00:17', '2026-06-03 05:02:52'),
-(7, 4, NULL, 750, 50000, 'bca', '155888888', 'disb-38887919-c186-4d55-84cd-8ef9ea9a278e', NULL, 'success', 'Withdrawal completed via Xendit.', '2026-06-03 05:03:49', '2026-06-03 05:05:25'),
-(9, 4, NULL, 225, 15000, 'shopeepay', '222222', 'disb-080a4fab-cf2d-418e-a65d-3a94f7617415', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 05:19:08', '2026-06-03 05:19:13'),
-(10, 4, NULL, 150, 10000, 'gopay', '5545454545', 'disb-1e4cec89-1f3f-4a63-aba4-df2ee26363a8', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 05:24:02', '2026-06-03 05:24:09'),
-(11, 4, NULL, 150, 10000, 'ovo', '08151515155', 'disb-db99ca03-1893-447b-a5b8-fad95d427e10', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 05:36:28', '2026-06-03 05:38:10'),
-(12, 4, NULL, 150, 10000, 'gopay', '44444', 'disb-29a3e72e-ed70-432d-8bf0-76a00d06b8d9', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 05:38:24', '2026-06-03 05:38:29'),
-(13, 4, NULL, 150, 10000, 'ovo', '08151515', 'disb-a659b226-e4cb-4226-8476-32f000d9cc63', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 05:38:52', '2026-06-03 05:40:47'),
-(14, 4, NULL, 150, 10000, 'shopeepay', '212121', 'disb-176b427d-ebb0-43c4-ac72-6eaed4b2a786', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 06:43:25', '2026-06-03 06:43:31'),
-(15, 4, NULL, 150, 10000, 'gopay', '182255', 'disb-a55cae33-4e34-4432-a98b-bc90f61696f2', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-03 06:47:35', '2026-06-03 06:47:40'),
-(16, 4, NULL, 150, 10000, 'gopay', '0895630887958', 'disb-6f180d38-aa2a-4bd4-b9a0-81a74f2315f1', NULL, 'success', 'Withdrawal completed via Xendit.', '2026-06-05 14:19:50', '2026-06-05 14:30:20'),
-(17, 4, NULL, 225, 15000, 'gopay', '089564039937', 'disb-8bf45079-0696-48de-b02e-ba2d2d08aa19', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-05 14:30:54', '2026-06-05 14:30:57'),
 (18, 8, NULL, 150, 10000, 'gopay', '0895630887958', 'disb-4e17d003-a9f5-428a-b28d-88d8a4dcbeb5', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-08 07:37:51', '2026-06-08 07:39:59'),
-(19, 4, NULL, 3000, 200000, 'dana', '5058205028525205825', 'disb-2744979e-4598-4f62-a1a0-52a2e7f654ba', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-08 09:11:38', '2026-06-08 09:11:42'),
-(20, 4, NULL, 150, 10000, 'gopay', '0815555555555555', 'disb-5af67c30-4934-4ed2-8c1e-0fb010cb7ccd', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-06-09 09:59:39', '2026-06-09 09:59:42');
+(21, 15, NULL, 150, 10000, 'gopay', '08151515155555', NULL, NULL, 'rejected', 'Gagal memproses via Xendit: No API Key detected. Please provide your API key in the Authorization header, using Basic auth (e.g. Authorization: Basic YOUR_SECRET_KEY). See https://developers.xendit.co/api-reference/#authentication for details', '2026-11-15 13:39:31', '2026-11-15 13:39:32'),
+(23, 15, NULL, 150, 10000, 'gopay', '0815151515155', 'disb-6f285f89-7749-486c-9609-0016800ce546', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-11-15 14:54:41', '2026-11-15 14:55:57'),
+(24, 28, NULL, 150, 10000, 'gopay', '081511111', 'disb-19ec3b1e-5643-4988-927b-5ffbc0e6133b', NULL, 'success', 'Withdrawal completed via Xendit webhook callback.', '2026-11-16 14:57:58', '2026-11-16 15:01:57');
 
 --
 -- Indexes for dumped tables
@@ -715,7 +798,7 @@ ALTER TABLE `withdraw`
 -- AUTO_INCREMENT for table `ai_reports`
 --
 ALTER TABLE `ai_reports`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -739,19 +822,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `misi`
 --
 ALTER TABLE `misi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `misi_anggota`
 --
 ALTER TABLE `misi_anggota`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `misi_sub`
 --
 ALTER TABLE `misi_sub`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
 
 --
 -- AUTO_INCREMENT for table `paket`
@@ -763,13 +846,13 @@ ALTER TABLE `paket`
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `user_activity`
@@ -781,13 +864,13 @@ ALTER TABLE `user_activity`
 -- AUTO_INCREMENT for table `user_balance`
 --
 ALTER TABLE `user_balance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `withdraw`
 --
 ALTER TABLE `withdraw`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
