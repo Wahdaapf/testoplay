@@ -221,7 +221,7 @@
     <div class="px-6 py-5 space-y-6 min-w-[700px] overflow-x-auto">
       @forelse($kampanyeList as $idx => $k)
         @if($idx > 0)<hr style="border:none;border-top:1px solid #f1f5f9;" class="dark:border-slate-800">@endif
-        <div>
+        <div class="{{ $k['status'] === 'failed' ? 'opacity-40 grayscale pointer-events-none select-none transition-opacity' : '' }}">
           {{-- Info tester --}}
           <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
             <div class="flex items-center gap-3">
@@ -275,7 +275,9 @@
                 $tNama     = addslashes($k['tester_nama']);
 
                 $cls = 'day-future';
-                if ($statusDay !== 'notdone') {
+                if ($k['status'] === 'failed') {
+                    $cls = 'day-future'; // Jika tester sudah failed, kotak hari tetap abu-abu (tidak ada yang biru/aktif)
+                } elseif ($statusDay !== 'notdone') {
                     $cls = match($statusDay) {
                         'pending'  => 'day-pending cursor-pointer hover:ring-2 hover:ring-amber-300',
                         'rejected' => 'day-rejected cursor-pointer hover:ring-2 hover:ring-red-300',
@@ -288,7 +290,7 @@
                 }
               @endphp
               <div class="day-cell {{ $cls }} relative"
-                @if($subId) wire:click="openValidationModal({{ $subId }}, '{{ $tNama }}', {{ $h }})" @endif>
+                @if($subId && $k['status'] !== 'failed') wire:click="openValidationModal({{ $subId }}, '{{ $tNama }}', {{ $h }})" @endif>
                 <span class="day-num">{{ $h }}</span>
                 @if($hasCat)
                   <span class="absolute top-0.5 right-0.5 w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>

@@ -468,9 +468,9 @@ class PantauProgress extends Page
         $today = Carbon::today()->toDateString();
         $yesterday = Carbon::yesterday()->toDateString();
 
-        // Ambil semua anggota yang masih aktif (accepted)
+        // Ambil semua anggota yang masih aktif (accepted / progress)
         $misiAnggotas = MisiAnggota::where('id_misi', $misi->id)
-            ->where('status', 'accepted')
+            ->whereIn('status', ['accepted', 'progress'])
             ->with('user')
             ->get();
 
@@ -481,17 +481,19 @@ class PantauProgress extends Page
                 continue;
             }
 
-            // Cek apakah ada submission kemarin
+            // Cek apakah ada submission kemarin yang sudah dikerjakan (bukan notdone)
             $subYesterday = MisiSub::where('id_user', $ma->id_user)
                 ->where('id_misi', $misi->id)
                 ->whereDate('created_at', $yesterday)
+                ->where('status', '!=', 'notdone')
                 ->first();
 
             if (!$subYesterday) {
-                // Hitung total submit sebelum hari ini
+                // Hitung total submit sebelum hari ini yang sudah dikerjakan
                 $totalSub = MisiSub::where('id_user', $ma->id_user)
                     ->where('id_misi', $misi->id)
                     ->whereDate('created_at', '<', $today)
+                    ->where('status', '!=', 'notdone')
                     ->count();
 
                 if ($totalSub < 14) {

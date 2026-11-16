@@ -8,12 +8,70 @@ class GeminiService
 {
     private string $apiKey;
     private string $endpoint = 'https://api.groq.com/openai/v1/chat/completions';
-    private string $model;
 
     public function __construct()
     {
         $this->apiKey = config('services.groq.key');
-        $this->model  = config('services.groq.model', env('GROQ_MODEL', 'llama-3.3-70b-versatile'));
+    }
+
+    private function getAvailableModels(): array
+    {
+        $configured = config('services.groq.model', env('GROQ_MODEL'));
+        $models = [];
+
+        if (!empty($configured)) {
+            $models[] = $configured;
+        }
+
+        try {
+            $resp = Http::timeout(10)
+                ->withHeaders([
+                    'Authorization' => 'Bearer ' . $this->apiKey,
+                ])
+                ->get('https://api.groq.com/openai/v1/models');
+
+            if ($resp->successful()) {
+                $remoteList = collect($resp->json('data', []))
+                    ->pluck('id')
+                    ->filter()
+                    ->values()
+                    ->all();
+
+                // Prioritaskan model chat yang populer jika tersedia di akun
+                $priority = [
+                    'openai/gpt-oss-120b',
+                    'openai/gpt-oss-20b',
+                    'qwen/qwen3.8-27b',
+                    'llama-3.3-70b-versatile',
+                    'llama-3.1-8b-instant',
+                ];
+
+                foreach ($priority as $p) {
+                    if (in_array($p, $remoteList)) {
+                        $models[] = $p;
+                    }
+                }
+
+                // Masukkan model teks lainnya dari respon Groq
+                foreach ($remoteList as $id) {
+                    if (!str_contains($id, 'whisper') && !str_contains($id, 'guard') && !str_contains($id, 'tts')) {
+                        $models[] = $id;
+                    }
+                }
+            }
+        } catch (\Throwable $e) {
+            // fallback if network fails
+        }
+
+        $fallback = [
+            'openai/gpt-oss-120b',
+            'openai/gpt-oss-20b',
+            'qwen/qwen3.8-27b',
+            'llama-3.3-70b-versatile',
+            'llama-3.1-8b-instant',
+        ];
+
+        return array_values(array_unique(array_filter(array_merge($models, $fallback))));
     }
 
     public function analyzeTesterFeedback(string $misiNama, array $catatanList): string
@@ -57,10 +115,7 @@ Nilai severity: "critical" (crash/data loss), "major" (fitur tidak berfungsi), "
 Skor 1-10: 1-3 tidak layak, 4-6 perlu perbaikan, 7-8 cukup layak, 9-10 siap launch.
 PROMPT;
 
-        $modelsToTry = array_values(array_unique([
-            $this->model,
-            'llama-3.3-70b-versatile',
-        ]));
+        $modelsToTry = $this->getAvailableModels();
 
         $lastError = null;
         $response = null;

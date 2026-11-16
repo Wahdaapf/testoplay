@@ -302,8 +302,9 @@ class MisiSaya extends Page implements HasForms
         $yesterday = Carbon::yesterday()->toDateString();
         $today = Carbon::today()->toDateString();
 
+        // Ambil misi yang sedang diikuti user (status accepted / progress)
         $activeMissions = MisiAnggota::where('id_user', $userId)
-            ->where('status', 'accepted')
+            ->whereIn('status', ['accepted', 'progress'])
             ->with('misi')
             ->get();
 
@@ -316,17 +317,19 @@ class MisiSaya extends Page implements HasForms
             if ($joinDate >= $today)
                 continue;
 
-            // Cek apakah ada submission kemarin
+            // Cek apakah ada submission kemarin yang sudah dikerjakan (bukan notdone)
             $subYesterday = MisiSub::where('id_user', $userId)
                 ->where('id_misi', $ma->id_misi)
                 ->whereDate('created_at', $yesterday)
+                ->where('status', '!=', 'notdone')
                 ->first();
 
             if (!$subYesterday) {
-                // Hitung total submit sebelum hari ini
+                // Hitung total submit sebelum hari ini yang sudah dikerjakan
                 $totalSub = MisiSub::where('id_user', $userId)
                     ->where('id_misi', $ma->id_misi)
                     ->whereDate('created_at', '<', $today)
+                    ->where('status', '!=', 'notdone')
                     ->count();
 
                 if ($totalSub < 14) {
